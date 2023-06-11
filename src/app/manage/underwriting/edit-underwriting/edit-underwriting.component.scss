@@ -1,0 +1,122 @@
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(57, 179, 235);
+    display: table-cell;
+}
+
+.input-text {
+    display: inline-grid;
+    text-align: center;
+}
+
+.buttons{
+    margin: 3px; 
+    padding: 10px;
+    display: inline-flex; 
+    align-items: center; 
+    text-align: center;
+    background-color: blue;
+    border-radius: 10px;
+    border-color: blue;
+    color: white;
+  }
+
+
+.input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 210px;
+    height: 30px;
+}
+
+
+.info {
+    margin-top: 20px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+}
+
+.buttons {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.regular-button {
+    margin: 7px;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-color: rgba(148, 0, 211, 0);
+}
+
+.table {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.ng2-smart-action-cell button {
+    padding: 5px 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  button + button {
+    margin-left: 2rem;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    nb-card-body {
+      display: flex;
+    }
+
+    button {
+      flex: 1;
+      padding: 0.8rem;
+    }
+  }
+
+  .custom-window-class {
+    height: 500px;
+    width: 800px;
+  }
+
+  @include media-breakpoint-down(is) {
+    nb-card-body {
+      display: block;
+    }
+
+    button {
+      + button {
+        margin-left: 0;
+      }
+
+      width: 100%;
+      display: block;
+      margin-bottom: 2rem;
+      padding: 0.75rem;
+    }
+  }
+}
+

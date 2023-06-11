@@ -1,0 +1,55 @@
+.simulation_container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    line-height: normal;
+    padding: 2.5rem;
+    background-color: #F4F4F6;
+    background-image: url('../../../../assets/images/ListBackgroundRotationLogo.png');
+    background-size: 100px;
+    background-repeat: repeat;
+    font-family: 'Varela Round';
+
+}
+.pa_container {
+    width: 80%;
+    height: 47%;
+    background-image: url('assets/images/simulation_construction_image.svg');
+    margin: auto;
+    margin-top: 15%;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    .text {
+        color: #42767E;
+        position: absolute;
+        top: 72%;
+        left: 12%;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .pa_container {
+        .text {
+            top: 90%;
+            font-size: 18px;
+        }
+    }
+}
+@media screen and (orientation:landscape) and (max-device-width: 480px)  { 
+    .pa_container {
+        width: inherit;
+        height: 47vh;
+        margin-top: 0px;
+    
+        .text {
+            top: 90%;
+            font-size: 18px;
+        }
+    }
+}

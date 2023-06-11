@@ -1,0 +1,23 @@
+<div class="flex-container">
+    <div class="side-buttons">
+        <button class="buttons" style="height: 55px; width: 130px;" (click)="addImpPage()">add new impairment</button>
+        <button class="buttons" style="height: 55px; width: 130px;" (click)="newUnder()">create new
+            underwriting</button>
+        <button class="buttons" style="height: 55px; width: 130px;" (click)="policyDashPage()">Policy Dashboard</button>
+        <button class="buttons" style="height: 55px; width: 130px;" (click)="underDashPage()">Underwriting Dashboard</button>
+        <button class="buttons" style="height: 55px; width: 130px;" (click)="addCasePage()">Add new case</button>
+        <button class="buttons" style="height: 55px; width: 130px;" (click)="notificationPage()">Alerts
+            ({{serviceData.numOfNtf}})</button>
+    </div>
+
+    <ngx-new-patient (ExportInternal)="exportInternal($event)" (action)="tranfer($event)"
+        *ngIf="regularHtml"></ngx-new-patient>
+    <ngx-export-pdf *ngIf="externalReport" (action)="tranfer($event)"></ngx-export-pdf>
+    <ngx-full-report-pdf *ngIf="internalReport" (action)="tranfer($event)"></ngx-full-report-pdf>
+    <ngx-add-impaiement *ngIf="newImpairment" (action)="tranfer($event)"></ngx-add-impaiement>
+    <ngx-edit-underwriting *ngIf="editUnder" (action)="tranfer($event)"></ngx-edit-underwriting>
+    <ngx-messages *ngIf="notification" (action)="tranfer($event)"></ngx-messages>
+    <ngx-case-msg *ngIf="messages" (action)="tranfer($event)"></ngx-case-msg>
+    <ngx-add-case *ngIf="addCase" (action)="tranfer($event)"></ngx-add-case>
+    <ngx-under-dashboard *ngIf="underDash" (action)="tranfer($event)"></ngx-under-dashboard>
+</div>

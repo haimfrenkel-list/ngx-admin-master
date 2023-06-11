@@ -1,0 +1,24 @@
+.message-card {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.reply-card {
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+#file-display {
+    position: relative; /* Enable relative positioning for child elements */
+  }
+  
+  #file-display button {
+    position: absolute; /* Position the remove button absolutely */
+    top: 5px; /* Set the top position */
+    right: 5px; /* Set the right position */
+    font-size: 14px; /* Customize the font size */
+  }
+  

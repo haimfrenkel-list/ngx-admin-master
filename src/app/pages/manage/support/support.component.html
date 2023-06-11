@@ -1,0 +1,78 @@
+
+<div class="supportBackground">
+   <div class="supportContainer" >
+        <div class="contactUs-section">
+            <div class="img-column">
+                <img src="../../../../assets/images/support.png" alt="We are here for you." style="max-width: 90%;">
+            </div>
+            <div class="form-column">
+                <div>
+                    
+                    <p class="here-for-you">{{user.firstName}}{{strings.hereForYou}}</p>
+                    <p class="leave-message">{{strings.leaveMessageFirstLine}}<br>{{strings.leaveMessageSecondLine}}</p>
+                </div>
+                <div>
+                <form (ngSubmit)="onSubmit()" >
+                        <input type="hidden" name="userName" value="{{user.firstName}} {{user.lastName}}" >
+                        <input type="hidden" name="userId" value="{{user._id}} {{user.lastName}}" >
+                        <div>
+                            <input type="text" name="subject" placeholder="{{strings.subjectPlaceHolder}}" class="form-input" required [(ngModel)]="subject">
+                        </div>
+                        <div>
+                            <textarea name="content" placeholder="{{strings.yourMessagePlaceHolder}}" rows="6" class="form-input" style="resize: none;" required [(ngModel)]="message"></textarea> 
+                        </div>
+                        <div class="requiredMessage" *ngIf="reqMessage">
+                            {{strings.requiredMessage}}
+                        </div>
+                        <div class="submit-button-div">
+                            <input appListButton type="submit" value="{{strings.submitButton}}" class="submit-button">
+                        </div>
+                            
+                    </form> 
+                </div>
+                
+                <div>
+                    <p class="support-email">{{strings.supportEmailFirstLine}}<br>{{strings.supportEmailSecondLine}}</p>
+                </div>
+            </div>   
+        </div>
+        <div class="fqa-section">
+            <div >
+                <h1 class="qna-title">{{strings.faqTitle}}</h1>
+            </div>
+            <div class="faq-table">
+                <li *ngFor='let qna of allQnAs' (click)="toggleAnswer(qna)" class="question-section"> 
+                    <div style="display: flex;">
+                        <span *ngIf="!qna.show" class="question-arrow">▸&nbsp;</span> 
+                        <span *ngIf="qna.show" class="question-arrow">▾&nbsp;</span> 
+                        <span>  {{qna.question}}</span><br *ngIf="qna.show">
+                    </div>
+                    
+                    <span *ngIf="qna.show" class="answer-section" [innerHTML]="qna.answer">
+                        
+                    </span>
+                </li>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<ngx-footer-pages style="position: absolute;
+bottom: 15px;
+width: 100%;
+text-align: center;"></ngx-footer-pages>
+<ng-template #contentTemplate2 class="policy_doc_invest-popup">
+    <div class="popup_t2_container">
+      <nb-icon class="closeIcon" icon="close-outline" (click)="closeWindow();"></nb-icon>
+      <div class="popup_main_container" *ngIf="! InvestmentMailSent" >
+        <div class="popupText">
+          {{strings.messageSentPopup}}
+        </div>
+      </div>
+      <div class="popup_main_container_sent" *ngIf="InvestmentMailSent" >
+        <div class="popup-sent-image"></div>
+        <div class="popup-sent-text">{{strings.investNowPopupSuccess}}</div>
+      </div>
+    </div>
+  </ng-template>
+  

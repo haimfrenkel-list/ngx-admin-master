@@ -1,0 +1,38 @@
+<table>
+    <thead>
+        <th>impairment</th>
+        <th>severity</th>
+        <th>Category</th>
+    </thead>
+    <tbody>
+        <tr class="uploadPolicyContainer" style="color: black;">
+
+            <ng-container>
+                <td>
+                    <input [(ngModel)]="emptyObj.impairment">
+                </td>
+                <td>
+                    <input [(ngModel)]="emptyObj.severity">
+                <td>
+                    <select name="test" #job (change)="pushCategory($event, job.value)">
+                        <option *ngFor="let i of categorys">{{i}}</option>
+                    </select>
+                </td>
+            </ng-container>
+        </tr>
+
+    </tbody>
+    <button (click)="save()">save</button>
+</table>
+
+<div>
+    <input type="file" (change)="onFileChange($event)" />
+</div>
+
+<div>
+    <h3>add catgory</h3>
+    <input type="text" #cat>
+    <button (click)="addCatgory(cat.value)">add</button>
+</div>
+
+<button class="btn btn-primary" (click)=" exportData()">export</button>

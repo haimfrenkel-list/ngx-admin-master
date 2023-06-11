@@ -1,0 +1,104 @@
+.itemContainer {
+    display: inline;
+}
+
+.a {
+    position: absolute;
+    width: 100%;
+}
+div img {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.contextMenu {
+    position: absolute;
+    min-width: 100%;
+    background-color: rgb(112, 119, 134);
+    padding: 15px;
+    z-index: 10;
+    white-space: nowrap;
+    border: solid 0.5px;
+    border-radius: 15px;
+    color: white;
+    
+    div {
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+.menuContainer {
+    position: relative;
+}
+
+.uploadPolicyContainer {
+    input[type="file"] {
+        display: none;
+    }
+    .custom-file-upload {
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        color: black;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    color: black;
+  
+    thead th {
+        text-align: center;
+    }
+    td {
+        border: 5px solid white; 
+        width: 121px;
+        background: gainsboro;
+    }
+    tr:first-child td {
+        border-top: 0;
+    }
+    tr:last-child td {
+        border-bottom: 0;
+    }
+
+    tr {
+        td:first-child {
+            border-left: 0;
+            color: #34879F;
+        }
+        td:last-child {
+            border-right: 0;
+        }
+        td {
+            color: gray;
+        }
+    }
+    input {
+        all: unset;
+    }
+}
+  
+.noStyle {
+    td {
+        background: transparent;
+    }
+}
+.list_label {
+    color: #34879F;
+}
+
+.bold {
+    font-weight: 600;
+}
+:host nb-tab {
+    padding: 1.25rem;
+  }
+  :host ::ng-deep  nb-radio .text {
+      color: black;
+  }
+  nb-radio-group{
+      display: flex;
+  }

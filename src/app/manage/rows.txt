@@ -1,0 +1,678 @@
+[
+    [
+        " ",
+        "טקסט חסר - אדום\n\nטקסט חדש - כתום\n\nטקסט מאושר - צהוב\n"
+    ],
+    [
+        "Page-one word",
+        "Key-one word",
+        "Value",
+        "Comments"
+    ],
+    [
+        "login",
+        "signIn",
+        "Sign in"
+    ],
+    [
+        "login",
+        "headerLine2",
+        "Log in with your email"
+    ],
+    [
+        "login",
+        "setPasswordHeader",
+        "Just one more step and you're in"
+    ],
+    [
+        "login",
+        "errorMessage"
+    ],
+    [
+        "login",
+        "Accredited credentials"
+    ],
+    [
+        "login",
+        "passwordRequired",
+        "Password is required!"
+    ],
+    [
+        "login",
+        "tempPassword",
+        "Temporary password"
+    ],
+    [
+        "login",
+        "newPassword",
+        "New password"
+    ],
+    [
+        "login",
+        "veifyPassword",
+        "Verify new password"
+    ],
+    [
+        "login",
+        "accrediteCheckboxError",
+        "You must be an accredited investor."
+    ],
+    [
+        "login",
+        "ssePopup",
+        "An accredited investor is a person or a business entity who is permitted to deal in securities that are not\nrequired to be registered with financial authorities. To learn more, click <a class=\"bisque\" target=\"_blank\" href=\"https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3\">here</a>"
+    ],
+    [
+        "login",
+        "continueButton",
+        "Continue to the platform"
+    ],
+    [
+        "login",
+        "emailRequired",
+        "Email is required"
+    ],
+    [
+        "login",
+        "forgotPassword",
+        "Forgot Password?"
+    ],
+    [
+        "login",
+        "successMessage",
+        "Welcome to LiST!"
+    ],
+    [
+        "login",
+        "rememberMe",
+        "Remember me"
+    ],
+    [
+        "login",
+        "matchPassword",
+        "Password doesn't match."
+    ],
+    [
+        "login",
+        "accreditedInvestors",
+        "I'm an accredited investors"
+    ],
+    [
+        "login",
+        "accreditedInvestorUrl",
+        "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3"
+    ],
+    [
+        "login",
+        "accreditedAlertMessage",
+        "You have to check accredited check box"
+    ],
+    [
+        "login",
+        "resetEmail",
+        "Please enter your email address"
+    ],
+    [
+        "login",
+        "resetTitle",
+        "Reset Password"
+    ],
+    [
+        "login",
+        "resetButton",
+        "Reset Password"
+    ],
+    [
+        "login",
+        "resetEmailConformtion",
+        "Check your inbox!\nWe've sent you an email with password reset instructions."
+    ],
+    [
+        "login",
+        "resetEmailErrorNotExists",
+        "Sorry, this email is not registered. Please try a different email address or sign up.    "
+    ],
+    [
+        "login",
+        "resetEmailError",
+        "Your email should be valid.\r\n\r\n\r"
+    ],
+    [
+        "support",
+        "hereForYou",
+        ", We are here for you!"
+    ],
+    [
+        "support",
+        "leaveMessageFirstLine",
+        "Leave a message and we will get back to you "
+    ],
+    [
+        "support",
+        "leaveMessageSecondLine",
+        "as soon as possible"
+    ],
+    [
+        "support",
+        "subjectPlaceHolder",
+        "Subject"
+    ],
+    [
+        "support",
+        "yourMessagePlaceHolder",
+        "Your message"
+    ],
+    [
+        "support",
+        "submitButton",
+        "Send"
+    ],
+    [
+        "support",
+        "supportEmailFirstLine",
+        "If you prefer, feel free to email us directly at"
+    ],
+    [
+        "support",
+        "supportEmailSecondLine",
+        "support@listfunding.com"
+    ],
+    [
+        "support",
+        "faqTitle",
+        "FAQ"
+    ],
+    [
+        "support",
+        "messageSentPopup",
+        " Your message has been sent successfully.\r\n"
+    ],
+    [
+        "support",
+        "requiredMessage",
+        "Subject and message are required"
+    ],
+    [
+        "simulation",
+        "unavailblePage",
+        "The page is under construction"
+    ],
+    [],
+    [
+        "pending-n-alerts",
+        "faceValue",
+        "Face Value"
+    ],
+    [
+        "pending-n-alerts",
+        "minInvest",
+        "Min. investment"
+    ],
+    [
+        "pending-n-alerts",
+        "",
+        "Pending and Alerts"
+    ],
+    [
+        "pending-n-alerts",
+        "viewOffer",
+        "View Offer"
+    ],
+    [
+        "pending-n-alerts",
+        "kycCardTitle",
+        "KYC - Know Your Customer"
+    ],
+    [
+        "pending-n-alerts",
+        "kycCardContent",
+        "Easily complete KYC using our online process."
+    ],
+    [
+        "pending-n-alerts",
+        "accreditedCardTitle",
+        "Accredited"
+    ],
+    [
+        "pending-n-alerts",
+        "accreditedCardContent",
+        "Complete your accreditation requirements-easily upload the documents"
+    ],
+    [
+        "pending-n-alerts",
+        "upload",
+        "Upload Now"
+    ],
+    [
+        "pending-n-alerts",
+        "uploadNow",
+        "Upload Now"
+    ],
+    [
+        "pending-n-alerts",
+        "accreditedPopupHeader",
+        "Please upload your accredited investor credentials"
+    ],
+    [
+        "pending-n-alerts",
+        "popupText",
+        "Do not have accredited investor credentials?\n<div style=\"margin-left:20px\">\n1. Download the relevant documents <a href=\"https://list-upload-files-test.s3.us-east-2.amazonaws.com/ggg/Investor+verification+letter+template+(1).pdf\" target=\"_blank\">here</a>\n2. Forward these documents to your CPA/Financial adviser or other authorized authority\n3. After consulting with them and understanding the documents and statements, please upload the signed documents using the “Upload Now” button\n4. You can learn more about Accredited Investors –<a target=\"_blank\" href=\"https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3\"> here</a> \n</div>",
+        "– “here” is a link",
+        "– “here” is a link"
+    ],
+    [],
+    [
+        "pending-n-alerts",
+        "personalInfoCardTitle",
+        "Personal info"
+    ],
+    [
+        "pending-n-alerts",
+        "personalInfoCardContent",
+        "Please fill in your basic information"
+    ],
+    [
+        "pending-n-alerts",
+        "updateNowButton",
+        "Update now"
+    ],
+    [
+        "pending-n-alerts",
+        "startButton",
+        "Start"
+    ],
+    [
+        "pending-n-alerts",
+        "financialInfoCardTitle",
+        "Financial info"
+    ],
+    [
+        "pending-n-alerts",
+        "financialInfoCardContent",
+        "Please fill in your financial information"
+    ],
+    [
+        "pending-n-alerts",
+        "uploadSuccessMessage",
+        "Your document has been uploaded successfully,\nOur legal team will review it shortly and notify you if necessary"
+    ],
+    [
+        "pending-n-alerts",
+        "uploadSuccessPermanentMessage",
+        "You have successfully uploaded the documents required by authorities for an accredited investor"
+    ],
+    [
+        "pending-n-alerts",
+        "AuthorizedUploadOfDoc",
+        "Final step"
+    ],
+    [
+        "pending-n-alerts",
+        "AuthorizedUploadOfDocButten",
+        "Uplode Now"
+    ],
+    [
+        "pending-n-alerts",
+        "AccreditedUploadSuccessfully",
+        "You have successfully uploaded the documents required"
+    ],
+    [
+        "holdings-investment-schedule",
+        "",
+        "Holdings & Investment Schedule"
+    ],
+    [
+        "holdings-investment-schedule",
+        "faceValue",
+        "Face Value"
+    ],
+    [
+        "holdings-investment-schedule",
+        "minInvest",
+        "Min. investment"
+    ],
+    [
+        "holdings-investment-schedule",
+        "viewOffer",
+        "View Offer"
+    ],
+    [
+        "holdings-investment-schedule",
+        "investorOpportunity",
+        "Investment Opportunities"
+    ],
+    [
+        "holdings-investment-schedule",
+        "buildAlternativeProtfolio",
+        "Start building your alternative Investment Portfolio"
+    ],
+    [
+        "legal&documents",
+        "",
+        "Legal & Documents"
+    ],
+    [
+        "account",
+        "pageTitle",
+        "Edit My Profile",
+        "-Instead of “edit my protilfe”"
+    ],
+    [
+        "account",
+        "basicInformation",
+        "Basic Information"
+    ],
+    [
+        "account",
+        "firstName",
+        "First Name"
+    ],
+    [
+        "account",
+        "lastName",
+        "Last Name"
+    ],
+    [
+        "account",
+        "resetPassword",
+        "Reset Password"
+    ],
+    [
+        "account",
+        "contactInformation",
+        "Contact Information"
+    ],
+    [
+        "account",
+        "email",
+        "Email"
+    ],
+    [
+        "account",
+        "address",
+        "Address"
+    ],
+    [
+        "account",
+        "city",
+        "City"
+    ],
+    [
+        "account",
+        "state",
+        "State"
+    ],
+    [
+        "account",
+        "zipCode",
+        "Zip code"
+    ],
+    [
+        "account",
+        "country",
+        "Country"
+    ],
+    [
+        "account",
+        "password",
+        "Password"
+    ],
+    [
+        "account",
+        "phoneNumber",
+        "Phone number"
+    ],
+    [
+        "account",
+        "linkedIn",
+        "Linkedin"
+    ],
+    [
+        "account",
+        "facebook",
+        "Facebook"
+    ],
+    [
+        "account",
+        "save",
+        "Save"
+    ],
+    [
+        "account",
+        "savedMessage",
+        "Your changes have been saved successfully"
+    ],
+    [
+        "account"
+    ],
+    [
+        "Invested Amount",
+        "",
+        "Amount Invested"
+    ],
+    [
+        "investment-opportunities",
+        "investNowPopup",
+        "Please contact me. I would like to proceed with this investment."
+    ],
+    [
+        "investment-opportunities",
+        "investNowPopupSuccess",
+        "Your investment request has been sent. We will contact you shortly in order to proceed with the investment."
+    ],
+    [
+        "investment-opportunities",
+        "offerNumber",
+        "Offer Number"
+    ],
+    [
+        "investment-opportunities",
+        "faceValue",
+        "Face Value"
+    ],
+    [
+        "investment-opportunities",
+        "minInvest",
+        "Min. investment"
+    ],
+    [
+        "investment-opportunities",
+        "viewOffer",
+        "View Offer"
+    ],
+    [
+        "investment-opportunities",
+        "avgDuration",
+        "Avg. duration"
+    ],
+    [
+        "investment-opportunities",
+        "avgIrr",
+        "Avg. IRR"
+    ],
+    [
+        "investment-opportunities",
+        "investNow",
+        "Invest now"
+    ],
+    [
+        "investment-opportunities",
+        "simulation",
+        "Simulation"
+    ],
+    [
+        "investment-opportunities",
+        "unavailblePage",
+        "The page is under construction"
+    ],
+    [],
+    [
+        "Investment opportunity-Proposition",
+        "",
+        "This offering has an investment entry component along with a commitment for ongoing further investments until maturity. The proceeds of the investment will be paid upon policy maturity, in a one time payment."
+    ],
+    [
+        "Investment opportunity-Proposition",
+        "",
+        "Example-Minimum Investment\n Investment at purchase"
+    ],
+    [
+        "global",
+        "genericCopyright",
+        "Copyright © 2018-2021. All rights reserved.     <a target=\"_blank\" href=\"https://listfunding.com/terms-of-use\">Terms Of Use</a> | <a target=\"\"_blank href=\"https://listfunding.com/privacy-policy__trashed-copy\">Privacy Policy<a/>"
+    ],
+    [
+        "Websit home page - menu ",
+        "investorOption",
+        "Investment opportunities, Holdings , Support "
+    ],
+    [
+        "Websit home page - menu ",
+        "MainButton",
+        "Investment opportunities"
+    ],
+    [
+        "investment-opportunities",
+        "popup1header",
+        "Welcome to LiST \n"
+    ],
+    [
+        "investment-opportunities",
+        "popup1content",
+        "Through the platform you will gain access to unique non-correlated investment opportunities"
+    ],
+    [
+        "investment-opportunities",
+        "popup1button",
+        "Next"
+    ],
+    [
+        "investment-opportunities",
+        "popup2content",
+        "The investments will appear in the \"Investment Opportunities\" tab"
+    ],
+    [
+        "investment-opportunities",
+        "popup2button",
+        "Got it"
+    ],
+    [
+        "investment-opportunities",
+        "popup3content",
+        "Before actively participating in one of the investment opportunities, you are required to complete the\nregistration process here"
+    ],
+    [
+        "investment-opportunities",
+        "popup3button",
+        "Compliance, got it"
+    ],
+    [
+        "investment-opportunities",
+        "popup4content",
+        "If you have any questions, you can reach out to us through the support panel, where you can also find\nfrequently asked questions."
+    ],
+    [
+        "investment-opportunities",
+        "popup4button",
+        "You're ready to start"
+    ],
+    [
+        "investment-opportunities",
+        "popup4chekbox",
+        "Don’t show me this again"
+    ],
+    [
+        "investment-opportunities",
+        "A"
+    ],
+    [
+        "investment-opportunities",
+        "popupInOfferChekbox",
+        "Click on the \"Add to Watchlist\" button in order to add this policy to your \"Watchlist & Simulation\" tab, where you can complete the investment process."
+    ],
+    [
+        "investment-opportunities",
+        "popupInOfferChekboxButton",
+        "Got it"
+    ],
+    [
+        "investment-opportunities",
+        "popupInOfferChekbox",
+        "Don’t show me this again"
+    ],
+    [
+        "investment-opportunities",
+        "popupInOfferGoToWitchList",
+        "The asset was added to the Watchlist tab"
+    ],
+    [
+        "investment-opportunities",
+        "buttonaddtowatchlist",
+        "Add to Watchlist"
+    ],
+    [
+        "investment-opportunities",
+        "buttonclicked",
+        "Added to Watchlist"
+    ],
+    [
+        "Witch list & Simulations",
+        "buttongotoinvestmentopportunity",
+        "Go to Investment Opportunities"
+    ],
+    [
+        "Witch list & Simulations",
+        "buttonsimulateandinvest",
+        "Simulate & Invest"
+    ],
+    [
+        "Witch list & Simulations",
+        "popupInOfferChekbox1",
+        "Welcome to the Watchlist  & Simulation tab Here you will be able to review, run simulations (available shortly) and complete your investments."
+    ],
+    [
+        "Witch list & Simulations",
+        "popupInOfferChekbox2",
+        "You can review the asset by clicking on the view button"
+    ],
+    [
+        "Witch list & Simulations",
+        "popupInOfferChekbox3",
+        "You can select the asset by clicking here"
+    ],
+    [
+        "Witch list & Simulations",
+        "popupInOfferChekbox4",
+        "Click on the Simulate & Invest button in order to run simulations or proceed with your investment "
+    ],
+    [
+        "Witch list & Simulations",
+        "popupInOfferChekbox5",
+        "You can delete assets from your Watchlist using the delete icon"
+    ],
+    [
+        "Witch list & Simulations",
+        "popupInOfferChekbox",
+        "Don’t show me this again"
+    ],
+    [
+        "Witch list & Simulations",
+        "PopupDeleteFromWitchList",
+        "Do you want to remove this asset from your Watchlist?"
+    ],
+    [
+        "Witch list & Simulations",
+        "PopuoIfNotCompietKYCetc",
+        "In order to complete the investment, please complete the required regulation process"
+    ],
+    [
+        "Witch list & Simulations",
+        "PopuoIfNotCompietKYCetcButten",
+        "Go to Pending & Alerts"
+    ],
+    [
+        "Witch list & Simulations",
+        "Feedbackpopupforinvestment",
+        "Your investment request has been submitted. We will contact you shortly."
+    ]
+]

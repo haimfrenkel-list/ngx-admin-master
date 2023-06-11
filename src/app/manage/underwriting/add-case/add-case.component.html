@@ -1,0 +1,10 @@
+<div #toPdf>
+    <div style="display: inline-flex;" >
+        <button class="buttons" (click)="patientFormPage()">Patient</button>
+        <button class="buttons" (click)="LEFormPage()">LE Providers</button>
+        <button class="buttons" (click)="caseFormPage()">Case</button>
+    </div>
+    <ngx-patient-form *ngIf="newPatientForm" (action)="transfer($event)"></ngx-patient-form>
+    <ngx-le-form *ngIf="newLEForm" (action)="transfer($event)"></ngx-le-form>
+    <ngx-case-form *ngIf="newCaseForm" (action)="transfer($event)"></ngx-case-form>
+</div>

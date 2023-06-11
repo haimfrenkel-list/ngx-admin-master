@@ -1,0 +1,134 @@
+<div style="padding: 40px; text-align: center;">
+
+    <div>
+        <div (click)="uploader.click()" class="title" style="color: #37818d;
+            border: 2px #37818d solid;
+            width: fit-content;
+            padding: 12px;
+            border-radius: 35px;
+            font-size: 20px;
+            margin: auto;
+            cursor: pointer;">
+
+            <input style="display: none;" hidden type="file" #uploader (change)="readTableFile($event)"
+                placeholder="Upload file" accept=".pdf, .doc, .docx" multiple>
+
+            <img src="/assets/images/doc_p_a_popup.svg" style="width: 30px; margin-right: 10px; margin-left: 20px;">
+            <span style="margin-right: 20px;">Choose Files</span>
+        </div>
+    </div>
+    <div>
+        <div class="fileList" style="width: 80%; min-height: 20vh; background-color: #0000001a; margin-top: 30px; margin-bottom: 30px;     margin-left: auto;
+            margin-right: auto;">
+            <div *ngFor="let file of files" class="filesRow" style="display: flex; margin-left: 20px;">
+                <div class="fileDetails">
+                    <img src="assets/images/doc_p_a_popup.svg" style="width: 20px; height: 25px;">
+                    <span style="margin-left: 10px;">{{file.name}} </span>
+                </div>
+                <button hidden type="button" #deleteFile (click)="remove(file)">X</button>
+                <img src="assets/images/x_p_a_popup.svg" style="width: 26px;
+                                    margin-left: 10px;
+                                    margin-top: 10px;" (click)="deleteFile.click()">
+            </div>
+        </div>
+        <div>
+            <div (click)="process()" class="title" style="color: #e98126;
+            border: 2px #e98126 solid;
+            width: fit-content;
+            padding: 12px;
+            border-radius: 35px;
+            font-size: 20px;
+            margin: auto;
+            cursor: pointer;">Upload files</div>
+            <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+        </div>
+        <div>
+            <div *ngIf="!dataService.demo" (click)="showFiles()" class="title" style="color: #e98126;
+            border: 2px #e98126 solid;
+            width: fit-content;
+            padding: 12px;
+            border-radius: 35px;
+            font-size: 20px;
+            margin: auto;
+            cursor: pointer;">process existing file</div>
+            <!--bindings={
+      "ng-reflect-ng-if": "false"
+    }-->
+        </div>
+        <div *ngIf="showExistngFiles && existingFiles">
+            <table>
+                <tr>
+                    <th>file index</th>
+                    <th>pacient name</th>
+                    <th>number of files</th>
+                    <th>general status</th>
+                    <th>files status</th>
+                    <th>to do</th>
+                    <th>*</th>
+                </tr>
+                <tr *ngFor="let data of existingFiles; let j = index">
+                    <td>{{data.dirIndex}}</td>
+                    <td>{{data.pacientName}}</td>
+                    <td>{{data.numOfFiles}}</td>
+                    <td>{{data.jobStatus}}</td>
+
+                    <td>
+                <tr *ngFor="let file of data.fileArray">
+                    <td>{{file.name}}: {{file.status}}</td>
+                </tr>
+                </td>
+                <td>
+                    <tr *ngFor="let file of data.fileArray; let i = index">
+                        <label for="todo"></label>
+                        <select id="todo" #job (change)="userAnswersClick($event, job.value, i, j)">
+                            <option value="full">full process</option>
+                            <option value="generalInfo">general info</option>
+                            <option value="stanza">stanza & feuturs</option>
+                            <option value="model">model</option>
+                        </select>
+                        {{todo}}
+                    </tr>
+                </td>
+                <td>
+                    <div (click)="processExistingFile(data.dirIndex ,data.pacientName,data.fileArray)"גד class="title"
+                        style="color: #e98126;
+                        border: 2px #e98126 solid;
+                        width: fit-content;
+                        padding: 12px;
+                        border-radius: 35px;
+                        font-size: 20px;
+                        margin: auto;
+                        cursor: pointer;">Upload files</div>
+                    <!--bindings={
+                  "ng-reflect-ng-if": "false"
+                }-->
+                </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="dataService.isFileUpkoadProccess">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Completed</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let obj of files">
+                <td>{{obj.name}}</td>
+                <td>
+                    <nb-progress-bar [value]="obj['fileProgress']" status="primary"></nb-progress-bar>
+                    <div style="width: 100%;">{{obj['fileProgress']}}%</div>
+                </td>
+                <td style="width: 70px; "><img *ngIf="obj['fileProgress'] >= 99" style="margin-left: 20px; width: 30px;"
+                        src="assets/images/v-icon.png" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="width: 100%; height: 200px;"></div>
+</div>

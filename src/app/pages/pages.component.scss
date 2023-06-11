@@ -1,0 +1,54 @@
+@import '../@theme/styles/themes';
+
+@include nb-install-component() {
+  ::ng-deep router-outlet + * {
+    display: block;
+    animation: fade 1s;
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .dataHeader{
+    margin-top: 28px;
+    font-family: 'Varela Round';
+    color: #515151;
+    font-size: 19px;
+  }
+  .dataBox{
+    background:rgba(255, 255, 255, 0.11) 0% 0% no-repeat padding-box;
+    width: 169px;
+    height: 41px;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-shadow: 0px 3px 6px #00000059;
+    
+  }
+  @media only screen and (max-width: 768px) { 
+    .dataHeader{
+      margin-top: 20px;
+      font-family: 'Varela Round';
+      color: #515151;
+      font-size: 16px;
+    }
+    .dataBox{
+      height: 25px;
+      padding-top: 0px;
+      font-size: 18px;
+      text-shadow: 0px 3px 6px #00000059;
+      
+    }
+  }
+
+}
+
+

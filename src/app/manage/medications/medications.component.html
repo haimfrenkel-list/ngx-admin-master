@@ -1,0 +1,39 @@
+<h4 style="color: black; margin-left: 30px; margin-top: 30px;">Medications</h4>
+<table *ngIf="!dataService.demo">
+    <thead>
+        <th *ngFor="let keyName of dataService.stanzaFeatuersMedsKeys">
+            <!-- <a *ngIf="keyName === 'family_related'">family</a>
+            <a *ngIf="keyName != 'family_related'"> {{keyName}}</a> -->
+            {{keyName}}
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of dataService.stanzaFeatuersMeds">
+            <td *ngFor="let keyName of dataService.stanzaFeatuersMedsKeys">
+                {{row[keyName]}}
+                <!-- <a *ngIf="keyName === 'page'" target="_blank"
+                    href="https://s3.us-east-2.amazonaws.com/managedev.listfunding.com/test.pdf#page={{row[keyName]}}">dwon</a> -->
+            </td>
+        </tr>
+       
+
+    </tbody>
+</table>
+
+
+    <table *ngIf="dataService.demo">
+        <thead>
+            <th *ngFor="let keyName of dataService.baseData.tables.Medication">
+                {{keyName}}
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of dataService.allData.tables.Medication">
+            <td *ngFor="let keyName of dataService.baseData.tables.Medication">
+                {{row[keyName]}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+<div style="width: 100%; height: 100px;"></div>
+

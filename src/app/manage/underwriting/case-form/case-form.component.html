@@ -1,0 +1,226 @@
+<div #toPdf>
+    <div class="flex-container">
+        <div>
+            <form [formGroup]="caseForm" class="cards">
+                <div class="card">
+                    <span class="input-text">
+                        <span>Case</span>
+                        <input disabled class="input" type="text" shape="round" formControlName="Case">
+                    </span>
+                </div>
+
+                <div class="card">
+                    <span class="card-title">Contact information</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Contact name</span>
+                        <input type="text" class="input" shape="round" formControlName="Contact name">
+                    </span>
+                    <span class="input-text">
+                        <span>Phone</span>
+                        <input type="tel" class="input" shape="round" formControlName="Phone">
+                    </span>
+                    <span class="input-text">
+                        <span>Email</span>
+                        <input type="email" class="input" shape="round" formControlName="Email">
+                    </span>
+                    <span class="input-text">
+                        <span>Broker</span>
+                        <input type="text" class="input" shape="round" formControlName="Broker">
+                    </span>
+                </div>
+                <div class="card">
+                    <span class="card-title">Carrier and Ratings</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Carrier</span>
+                        <select class="input" #carrier formControlName="Carrier"
+                            (change)="onChooseCarrier(carrier.value)">
+                            <option value="{{value.Carrier}}" *ngFor="let value of carriers">
+                                {{value.Carrier}}</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Policy Form</span>
+                        <input type="text" class="input" shape="round" formControlName="Policy Form">
+                    </span>
+                    <span class="input-text">
+                        <span>Policy number</span>
+                        <input type="text" class="input" shape="round" formControlName="Policy number">
+                    </span>
+                    <span class="input-text">
+                        <span>Rating</span>
+                        <input type="text" class="input" shape="round" formControlName="Rating">
+                    </span>
+                    <span class="input-text">
+                        <span>s&p</span>
+                        <input type="text" class="input" shape="round" formControlName="s&p">
+                    </span>
+                    <span class="input-text">
+                        <span>fitch</span>
+                        <input type="text" class="input" shape="round" formControlName="fitch">
+                    </span>
+                    <span class="input-text">
+                        <span>Moody’s</span>
+                        <input type="text" class="input" shape="round" formControlName="Moody’s">
+                    </span>
+                    <span class="input-text">
+                        <span>AMBEST</span>
+                        <input type="tel" class="input" shape="round" formControlName="AMBEST">
+                    </span>
+                    <div class="card">
+                        <span class="input-text">
+                            <span>Update Carriers Rating</span>
+                            <input type="file" (change)="onFileChange($event)" />
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="card-title">Basic policy information</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Market</span>
+                        <select class="input" formControlName="Market">
+                            <option value="Secondary">Secondary</option>
+                            <option value="Tertiary">Tertiary</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Policy type</span>
+                        <select class="input" formControlName="Policy type">
+                            <option value="{{value}}" *ngFor="let value of policyTypeValues">
+                                {{value}}</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Lapse</span>
+                        <input type="number" class="input" shape="round" formControlName="Lapse">
+                    </span>
+                    <span class="input-text">
+                        <span>Face amount</span>
+                        <input type="number" class="input" shape="round" (change)="calcNetFace()"
+                            formControlName="Face amount" >
+                    </span>
+                    <span class="input-text">
+                        <span>Loan balance</span>
+                        <input type="number" class="input" shape="round" (change)="calcNetFace()"
+                            formControlName="Loan balance" >
+                    </span>
+                    <span class="input-text">
+                        <span>Net Face amount</span>
+                        <input type="text" class="input" disabled="true" shape="round" formControlName="Net Face amount"
+                           >
+                    </span>
+                    <span class="input-text">
+                        <span>Date of issue</span>
+                        <input type="date" class="input" shape="round" formControlName="Date of issue">
+                    </span>
+                    <span class="input-text">
+                        <span>Age calculation</span>
+                        <input type="text" class="input" shape="round" formControlName="Age calculation">
+                    </span>
+                    <span class="input-text">
+                        <span>state of issue</span>
+                        <input type="text" class="input" shape="round" formControlName="state of issue">
+                    </span>
+                    <span class="input-text">
+                        <span>Lives insured</span>
+                        <select disabled="true" class="input" formControlName="Lives insured">
+                            <option value="single">single</option>
+                            <option value="survivor">survivor</option>
+                        </select>
+                    </span>
+
+                    <span class="input-text">
+                        <span>Premium until age</span>
+                        <input type="text" class="input" shape="round" formControlName="Premium until age">
+                    </span>
+                    <span class="input-text">
+                        <span>ILL date</span>
+                        <input type="date" class="input" shape="round" formControlName="ILL date">
+                    </span>
+
+                    <span class="input-text">
+                        <span>STOLI/fraud risk</span>
+                        <select class="input" formControlName="STOLI/ fraud risk">
+                            <option *ngFor="let value of STOLI" value={{value}}>{{value}}</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="card">
+                    <span class="card-title">Fees</span>
+                    <br>
+                    <table>
+                        <thead>
+                            <th>Fee</th>
+                            <th>Value</th>
+                            <th>Note</th>
+                        </thead>
+                        <tbody>
+                            <tr class="uploadPolicyContainer" *ngFor="let fee of fees">
+                                <td>
+                                    <span class="input-text">{{fee.value}}</span>
+                                </td>
+                                <td>
+                                    <input type="text" class="input" shape="round" formControlName="{{fee.value}}"
+                                       >
+                                </td>
+                                <td>
+                                    <input type="text" class="input" shape="round" formControlName="{{fee.note}}">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card">
+                    <span class="card-title">Values</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Value date</span>
+                        <input type="date" class="input" shape="round" formControlName="Value date">
+                    </span>
+                    <span class="input-text">
+                        <span>Account value</span>
+                        <input type="text" class="input" shape="round" formControlName="Account value">
+                    </span>
+                    <span class="input-text">
+                        <span>Surrender value</span>
+                        <input type="text" class="input" shape="round" formControlName="Surrender value">
+                    </span>
+                </div>
+                <div class="card">
+                    <span class="card-title">Final Pricing Information</span>
+                    <br>
+                    <span class="input-text">
+                        <span>PO</span>
+                        <select class="input" formControlName="PO">
+                            <option value="{{value}}" *ngFor="let value of POvalues">
+                                {{value}}</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>NAV</span>
+                        <input type="number" class="input" shape="round" formControlName="NAV">
+                    </span>
+                    <span class="input-text">
+                        <span>IRR Gross</span>
+                        <input type="number" class="input" shape="round" formControlName="IRR Gross">
+                    </span>
+                    <span class="input-text">
+                        <span>IRR Net</span>
+                        <input type="number" class="input" shape="round" formControlName="IRR Net">
+                    </span>
+                    <span class="input-text">
+                        <span>Closing price</span>
+                        <input type="text" class="input" shape="round" formControlName="Closing price">
+                    </span>
+                </div>
+            </form>
+            <!-- <button *ngIf="updateMode === 'Create'" class="buttons" (click)="saveCase()">create</button> -->
+            <!-- <button *ngIf="updateMode === 'Update'" class="buttons" (click)="updateCase(true)">Update and move to LE -->
+                <!-- providers</button> -->
+            <button class="buttons" (click)="updateCase(false)">Update</button>
+
+        </div>
+    </div>
+</div>

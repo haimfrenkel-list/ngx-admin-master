@@ -1,0 +1,96 @@
+<div>
+    <div #toPdf>
+        <div class="a4">
+            <div class="main-title">Life expectancy report - {{data.Case}}</div>
+            <div class="cards">
+                <div class="card">
+                    <span class="card-title">Basic info</span>
+                    <div style="display: flex;">
+                        <span class="field">Name</span><span class="data">{{data.FirstName}} {{data.LastName}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">Date Of Birth</span><span class="data">{{data.DOB}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">Gender</span><span class="data">{{data.Gender}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">SSN</span><span class="data">{{data.SSN}}</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="card-title">Medical info</span>
+                    <div style="display: flex;">
+                        <span class="field">Smoker</span><span *ngIf="data.Smoker" class="data">Yes</span>
+                        <span class="field">Smoker</span><span *ngIf="!data.Smoker" class="data">No</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">Last BMI</span><span class="data">{{data.BMI}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field"></span><span class="data"></span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field"></span><span class="data"></span>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="card-title">Policy info</span>
+                    <div style="display: flex;">
+                        <span class="field">sale Date</span><span class="data">{{data.saleDate}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">Policy size</span><span class="data">{{data.policySize}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">MR Start Date</span><span class="data">{{data.StartDate}}</span>
+                    </div>
+                    <div style="display: flex;">
+                        <span class="field">MR End Date</span><span class="data">{{data.EndDate}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 206mm;">
+                <span class="card-title">Life expectancy</span>
+                <div style="display: flex;">
+                    <div style="display: flex; width: 200px; margin: 0px 15px 0px 15px;">
+                        <span class="field">Life Expectancy</span><span class="data">{{data.LE}}</span>
+                    </div>
+                    <div style="display: flex;  width: 250px;  margin: 0px 15px 0px 15px;">
+                        <span class="field">Median</span><span class="data">{{data.median}}</span>
+                    </div>
+                    <div style="display: flex;  width: 250px;  margin: 0px 15px 0px 15px;">
+                        <span class="field">Credit\Debit</span><span class="data">{{data.SummrayCD}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div style="display: flex;">
+                    <ngx-charts [data]="charts['LE']"></ngx-charts>
+                    <ngx-charts [data]="charts['prob']"></ngx-charts>
+                    <div>
+                        <div style="display: flex;">
+                            <span class="tabel-title-data">month</span>
+                            <span class="tabel-title-data">lives</span>
+                            <span class="tabel-title-data">dead</span>
+                            <span class="tabel-title-data">reasonability</span>
+                        </div>
+                        <span *ngFor="let data of data.LEdata; let i = index" style="display: flex;">
+                            <span class="table-data">{{i + 1}}</span>
+                            <span class="table-data">{{data.lives}}</span>
+                            <span class="table-data"> {{data.deth}}</span>
+                            <span class="table-data"> {{data.pre}}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button style="margin-left: 20px;" (click)="downloadPdf()">Export</button>
+    </div>
+</div>
+<a [href]="fileUrl" [download]="fileName" #download id="downloadPdf" style="visibility: hidden;">DownloadFile</a>

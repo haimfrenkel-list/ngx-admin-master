@@ -1,0 +1,87 @@
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(57, 179, 235);
+    display: table-cell;
+}
+
+.input-text {
+    display: inline-grid;
+    text-align: center;
+}
+
+.buttons{
+    margin: 3px; 
+    padding: 10px;
+    display: inline-flex; 
+    align-items: center; 
+    text-align: center;
+    background-color: blue;
+    border-radius: 10px;
+    border-color: blue;
+    color: white;
+  }
+
+
+.input {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 210px;
+    height: 30px;
+}
+
+
+.error {
+    border: 1px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+
+.info {
+    margin-top: 20px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+}
+
+.buttons {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.regular-button {
+    margin: 7px;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-color: rgba(148, 0, 211, 0);
+}
+.card-title{
+    text-align: center;
+    text-size-adjust: 30px;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+
+.table {
+    margin-top: 100px;
+    margin-left: 20px;
+}

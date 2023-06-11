@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="message-box" *ngFor="let message of editMessages; let i = index">
+      
+        <p class="message-from">{{ message.message.authorName }}</p>
+        <p class="message-date">{{ message.message.date }}</p>
+        <p class="message-text">{{ message.message.body }}</p>
+        <div *ngIf="message.message.files">
+            <p *ngFor="let src of message.message.files" >
+                <img *ngIf="src['type']=== 'image'" src="{{src.url}}"  width="500" height="600">
+                <embed  *ngIf="src['type']=== 'pdf'" src="{{src.url}}"  width="500" height="600"/>
+            </p>
+           
+        </div>
+        
+        <div class="button-group">
+            <button (click)="replay(i)" class="btn btn-reply">Reply</button>
+            <button class="btn btn-delete" (click)="delete(message.message)">Delete</button>
+        </div>
+        <div *ngIf="editMessages[i].replay">
+            <textarea [(ngModel)]="editMessages[i].textForReplay"></textarea>
+            <button (click)="send(message.message, i)" class="btn btn-reply">send</button>
+        </div>
+        <div *ngIf="message.message.Replayed">
+            <ngx-show-msg [messages]="message.message.Replayed"></ngx-show-msg>
+        </div>
+    </div>
+</div>

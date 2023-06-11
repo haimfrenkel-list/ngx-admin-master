@@ -1,0 +1,211 @@
+// @font-face {
+//     font-family: Varela;
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('../../../../assets/fonts/Varela-Round/VarelaRound-Regular.eot'); 
+//     src: url('../../../../assets/fonts/Varela-Round/VarelaRound-Regular.eot?#iefix') format('embedded-opentype'); 
+//     src: url('../../../../assets/fonts/Varela-Round/VarelaRound-Regular.woff2') format('woff2');
+//     src: url('../../../../assets/fonts/Varela-Round/VarelaRound-Regular.woff') format('woff');
+//     src: url('../../../../assets/fonts/Varela-Round/VarelaRound-Regular.ttf') format('truetype'); 
+//     src: url('../../../../assets/fonts/Varela-Round/VarelaRound-Regular.svg#VarelaRound') format('svg'); 
+ 
+  
+//   }
+
+.supportBackground{
+    background-color: #F4F4F6;
+    background-image: url('../../../../assets/images/ListBackgroundRotationLogo.png');
+    background-size: 100px;
+    background-repeat: repeat;
+    padding-bottom: 30px;;
+}
+
+.supportContainer {
+    cursor: default;
+    color:black;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2.5rem;
+    *{
+        font-family: Varela Round;
+    }
+
+    .fqa-section{
+        margin-bottom: 10%;
+    }
+    
+    .contactUs-section{
+        display: grid;
+        grid-template-columns: repeat(40, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+    }
+    .img-column {
+    
+        grid-area: 1/1/2/24;
+    
+        }
+        
+        .form-column {
+            grid-area: 1/23/2/40;
+        }
+    
+    .qna-title{
+        color:#27838e;
+        font-size: 40px;
+        border-bottom: 1px rgb(185, 185, 185) solid;
+        width: 300px;
+        
+    }
+    
+    .here-for-you{
+        color:#27838e;
+        font-size: 26px;
+        
+    }
+    
+    .leave-message{
+        color: #707070;
+        font-weight: lighter;
+        font-size: large;
+        font-size: 18px;
+    }
+
+    .support-email{
+        color: #707070;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    .form-input{
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        padding-left: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color:#338993;
+        color: black;
+    }
+    
+    .submit-button-div{
+        
+        text-align: center;
+        
+    }
+
+    .submit-button{
+        
+        width: 188px;
+        height: 34px;
+        align-self: center;
+        font-size: 20px;
+       border:none;
+    }
+
+    .faq-table{
+        background-color: #ffffff;
+        border-bottom: 1px solid rgb(185, 185, 185);
+    }
+    
+    .question-section{
+        color:#27838e;
+       
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(185, 185, 185);
+        border-bottom: none;
+        padding-top: 10px;
+
+        padding-bottom: 10px;
+        font-size: 18px;
+        list-style-type: none;
+        cursor: pointer;
+        
+    }
+    
+    .question-arrow{
+        font-size:x-large;
+        font-weight: bolder;
+        padding-left: 10px;
+    }
+    
+    .answer-section{
+        margin-top: 10px;
+        color:black;
+        border-top: 1px solid rgb(185, 185, 185);
+        padding-top: 20px;
+        padding-left: 33px;
+        padding-bottom: 10px;
+        font-size: 15px;
+        font-weight: lighter;
+        color: #707070;
+        display:block;
+        
+    }
+}
+
+.requiredMessage {
+    color: red;
+}
+
+::ng-deep .label-index {
+    width: 3rem;
+    height: 3rem;
+    background-color: #68BFBF;
+}
+
+::ng-deep nb-window nb-card nb-card-header {
+    display: none !important;
+}
+
+.popup_t2_container {
+    width: 400px;
+    height: 200px;
+}
+.popupText{
+    line-height: 30px;
+    font-size: 25px;
+    color: black;
+}
+.popup_main_container {
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.closeIcon {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) { 
+    .popup_t2_container {
+        width: 80%;
+        height: default;
+    }
+    .popupText {
+        font-size: 20px;
+    }
+    .supportContainer{
+        padding: 1rem;
+        .img-column {
+        
+            grid-area: none;
+            display: none;
+        
+        }
+            
+        .form-column {
+            grid-area: none;
+        }
+        .contactUs-section {
+            display: block;
+        }
+    }
+
+  }

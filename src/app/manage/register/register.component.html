@@ -1,0 +1,37 @@
+<div [formGroup]="registerForm" style="padding: 30px;">
+
+
+    <label>
+        Email:
+        <input type="email" formControlName="email">
+    </label>
+    <label>
+        User Name:
+        <input type="text" formControlName="userName">
+    </label>
+    <label>
+        Full Name:
+        <input type="text" formControlName="privateName">
+    </label>
+    <label>
+        role:
+        <select formControlName="role">
+            <option value='Admin'>Admin</option>
+            <option value='Underwriter'>Underwriter</option>
+            <option value='Analyst'>Analyst</option>
+
+        </select>
+    </label>
+    <label> 
+        Password:
+        <input type="password" formControlName="password">
+    </label>
+    <label>
+        confirm password:
+        <input type="password" formControlName="confirmPassword">
+    </label>
+    <div *ngIf="passwordMatchError">
+        Password does not match
+    </div>
+    <button type="submit" [disabled]="!registerForm.valid" (click)="save()">Submit Application</button>
+</div>

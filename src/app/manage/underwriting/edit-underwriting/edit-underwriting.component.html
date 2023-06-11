@@ -1,0 +1,17 @@
+<!-- <div class="cards">
+    
+</div>-->
+
+
+<div *ngFor="let data of tabelData" class="table">
+    <span style="font-size: large; font-weight: bold;">{{data.title}}</span>
+    <nb-card>
+        <nb-card-body>
+            <ng2-smart-table (edit)="getData($event)" [settings]="settings" [source]="data.source"
+                (delete)="deletePolicy($event)"  (custom)="getMoreData($event)">
+            </ng2-smart-table>
+        </nb-card-body>
+    </nb-card>
+    <!-- (userRowSelect)="openWindowForm($event)" -->
+</div>
+  

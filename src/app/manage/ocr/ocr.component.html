@@ -1,0 +1,45 @@
+<div style="color: black; margin: 30px;">
+    <h3 style="color: black;">Extracting files</h3>
+<div style="color: black; margin: 30px;" *ngIf="! workerService.isFileUpkoadProccessDone">
+    Waiting for files...
+</div>
+<div *ngIf="workerService.isFileUpkoadProccessDone && ! workerService.isProccecing">
+    <div (click)="process()" class="title" style="color: #e98126;
+    border: 2px #e98126 solid;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 35px;
+    font-size: 20px;
+    margin: auto;
+    cursor: pointer;"> Process data </div>
+
+</div>
+<div *ngIf="workerService.isProccecing">
+    <table style="color: black;">
+        <thead>
+            <th>File name</th>
+            <th>Status</th>
+            <th>Progress</th>
+            <th>Notes</th>
+        </thead>
+        <tbody >
+            <tr *ngFor="let row of workerService.files">
+                <td>{{row.name}}</td>
+                <td>{{row.status}}</td>
+                <td style="width: 200px;">
+                    <!-- <div style="height: 15px; background-color: red;" [style.width.%]="row.progress"></div> -->
+                    <nb-progress-bar [value]="row.progressOcr" status="primary"></nb-progress-bar>
+                    <div style="width: 100%;">{{row.progressOcr}}%</div>
+                </td>
+                <td>
+                    <div>{{row.pdfText}}</div>
+                    <div>{{row.pdfImages}}</div>
+                    <div>{{row.pdfQuality }}</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="jobStatus">{{jobStatus}}</div>
+</div>
+</div>

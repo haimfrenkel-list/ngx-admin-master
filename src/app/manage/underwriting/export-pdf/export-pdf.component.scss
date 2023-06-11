@@ -1,0 +1,82 @@
+.a4 {
+  width: 21cm;
+  height: 29.7cm;
+
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.table-data {
+  margin-right: 0px;
+  margin-bottom: 1px;
+  width: 55px;
+  height: 15px;
+  background-color: wheat;
+  text-align: center;
+  font-size: x-small;
+}
+
+.tabel-title-data {
+  width: 55px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: small;
+}
+
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+
+.card {
+  margin: 2mm;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(57, 179, 235);
+  width: 67mm;
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+  text-size-adjust: 30px;
+  font-size: large;
+  font-weight: bold;
+  margin: 15PX;
+}
+
+.field {
+  text-align: start;
+  font-weight: bold;
+}
+
+.data {
+  text-align: end;
+  margin-left: auto;
+}
+
+.all {
+  display: inline;
+}
+
+.main-title {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  width: 210mm;
+}
+
+.charts {
+  margin: 5mm;
+  width: 95mm;
+  height: 250px;
+}

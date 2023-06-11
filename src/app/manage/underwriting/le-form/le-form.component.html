@@ -1,0 +1,71 @@
+<div #toPdf>
+    <div class="flex-container">
+        <div>
+            <form [formGroup]="leForm" class="cards">
+                <div class="card" style="width:auto;">
+                    <span class="card-title">LE providers</span>
+                    <br>
+                    <table style="display: inline-block;">
+                        <thead>
+                            <th>LE provider</th>
+                            <th>LE date</th>
+                            <th>certificate number</th>
+                            <th>Mean LE</th>
+                            <th>Median LE</th>
+                            <th>Primary impairment</th>
+                            <th>Last medical record</th>
+                            <th>LE type</th>
+                        </thead>
+                        <tbody formArrayName="LEproviders">
+                            <tr class="uploadPolicyContainer" style="color: black;"
+                                *ngFor="let impr of leForm.controls.LEproviders['controls'] let i = index"
+                                [formGroupName]="i">
+                                <ng-container>
+                                    <td>
+                                        <select class="input" formControlName="LE provider">
+                                            <option value="{{provider}}" *ngFor="let provider of providers">
+                                                {{provider}}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input class="input" type="date" formControlName="LE date">
+                                    </td>
+                                    <td>
+                                        <input class="input" type="text" formControlName="certificate number">
+                                    </td>
+                                    <td>
+                                        <input class="input" type="text" formControlName="Mean LE">
+                                    </td>
+                                    <td>
+                                        <input class="input" type="number" formControlName="Median LE">
+                                    </td>
+
+                                    <td>
+                                        <input class="input" formControlName="Primary impairment">
+                                    </td>
+                                    <td>
+                                        <input class="input" type="date" formControlName="Last medical record">
+                                    </td>
+                                    <td>
+                                        <select class="input" formControlName="LE type">
+                                            <option value="clinical">clinical, d/c</option>
+                                            <option value="d/c">d/c</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button class="buttons" (click)="removePro(i)">remove</button>
+                                    </td>
+                                </ng-container>
+                            </tr>
+                        </tbody>
+                        <button class="buttons" (click)="addLEproviders()">add</button>
+                    </table>
+                    <br>
+                </div>
+            </form>
+            <button  *ngIf="updateMode === 'Create'" class="buttons" (click)="saveLE()">create</button>
+            <button *ngIf="updateMode === 'Update'" class="buttons" (click)="updateLE(true)">Update and finish</button>
+            <button *ngIf="updateMode === 'Update'" class="buttons" (click)="updateLE(false)">Update</button>
+        </div>
+    </div>
+</div>

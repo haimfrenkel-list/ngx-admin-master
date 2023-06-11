@@ -1,0 +1,230 @@
+
+.fileListContainer
+{
+    width: 80%;
+    min-height: 20vh;
+    background-color: #0000001a;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//.fileList
+//{
+//  /*background-color: #E3E3E3;
+//  text-align: center;
+//  padding: 20px 0;
+//  font-size: 30px;
+//  border-radius: 10px;
+//  border-width: 1px; 
+//  border-style: solid;
+//  border: 2px solid #E3E3E3;
+//  box-shadow: #00000029 0px 3px 6px;
+//  position: absolute;
+//  width: 70%;
+//  left: 15%;
+//  padding: 24px;
+//  top: 5%;
+//  height: 5%;*/
+//  height: 200px;
+//    display: grid;
+//    grid-template-columns: repeat(2,1fr);
+//    justify-items: center;
+//    -webkit-box-align: center;
+//    align-items: center;
+//    overflow-y: scroll;
+//}
+
+  
+
+.fileInFileList
+{
+    font-size: 16px;
+    width: 350px;
+    height: 56px;
+    background: no-repeat padding-box #fff;
+    box-shadow: 0 3px 3px #707070;
+    border: .5px solid #bfbfbf;
+    border-radius: 5px;
+    margin-top: 8px;
+    line-height: 56px;
+    text-align: left;
+    padding-left: 53px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+  /*background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: inherit;
+  border-width: 1px; 
+  border-style: solid;
+  width: 40%;
+  border: 2px solid #E3E3E3;
+  box-shadow: #00000029 0px 3px 6px;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 2px;
+  margin: 12px;
+  height: 30px;
+  position: absolute;*/
+}
+
+
+.uploadButton
+{
+    /*margin-right: auto;
+    height: 42px;
+    margin-left: auto;
+    font-family: "Varela Round";
+    font-size: 18px;
+    color: white;
+    border-radius: 44px;
+    opacity: 1;
+    border-color: #34879F;
+    position: fixed;
+    left: 50%;
+    margin-top: 30px;*/
+    color: #37818d;
+    border: 2px #37818d solid;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 35px;
+    font-size: 25px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.tableTitle
+{
+    color:#34879F;
+    font-size: 30px;
+    position: relative;
+    display: flex;
+    left: 20%;
+    padding: 43px;
+}
+.dueDiligenceRow{
+    border-collapse: collapse;
+    padding: 15px;
+    background-color:#F5F5F5;
+    color:#707070;
+    font-size: 16px;
+    box-shadow: 0px 3px 6px #00000071;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 50px;
+    white-space: nowrap;
+    position: relative;
+  }
+
+.dueDiligenceTable{
+    box-shadow: 0px 2px 2px #00000094;
+    font-size: 13px;
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+  }
+
+  .investNowPageHedaer
+  {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;  
+    color: #E98126;
+    height: 15%;
+    font-size: 3.5vh;
+    padding-left: 12.5%;
+    padding-top: 4%;
+  }
+
+
+
+.processButton
+{
+    margin-right: auto;
+    height: 42px;
+    margin-left: auto;
+    font-family: "Varela Round";
+    font-size: 18px;
+    color: white;
+    border-radius: 44px;
+    opacity: 1;
+    border-color: #34879F;
+    left: 50%;
+    margin-top: 30%;
+    position: relative;
+}
+
+
+  
+.fileList{
+  height: 200px;
+  display: grid;
+ // grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto;
+
+  justify-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.fileDetails{
+  font-size: 16px;
+  color: #707070;
+  width: 350px;
+  height: 56px;
+  background: no-repeat padding-box #fff;
+  box-shadow: 0 3px 3px #707070;
+  border: .5px solid #bfbfbf;
+  border-radius: 5px;
+  margin-top: 8px;
+  line-height: 56px;
+  text-align: left;
+  padding-left: 53px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    color: black;
+    width: 900px;
+    margin: auto;
+  
+    thead th {
+        text-align: center;
+    }
+    td {
+        border: 5px solid white; 
+        font-size: 12px;
+        background: gainsboro;
+    }
+    tr:first-child td {
+        border-top: 0;
+    }
+    tr:last-child td {
+        border-bottom: 0;
+    }
+
+    tr {
+        td:first-child {
+            border-left: 0;
+            color: #34879F;
+        }
+        td:last-child {
+            border-right: 0;
+        }
+        td {
+            color: gray;
+        }
+    }
+    input {
+        all: unset;
+    }
+}

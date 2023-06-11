@@ -1,0 +1,251 @@
+{
+    "login": {
+        "signIn": "Sign in",
+        "logIn": "log in",
+        "headerLine2": "Log in with your email",
+        "setPasswordHeader": "Just one more step and you're in",
+        "passwordRequired": "Password is required!",
+        "tempPassword": "Temporary password",
+        "newPassword": "New password",
+        "veifyPassword": "Verify new password",
+        "accrediteCheckboxError": "You must be an accredited investor.",
+        "ssePopup": "An accredited investor is a person or a business entity who is permitted to deal in securities that are not\nrequired to be registered with financial authorities. To learn more, click <a class=\"bisque\" target=\"_blank\" href=\"https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3\">here</a>",
+        "continueButton": "Continue to the platform",
+        "emailRequired": "Email is required",
+        "forgotPassword": "Forgot Password?",
+        "successMessage": "Welcome to LiST!",
+        "rememberMe": "Remember me",
+        "matchPassword": "Password doesn't match.",
+        "accreditedInvestors": "I'm an accredited investors",
+        "accreditedInvestorUrl": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3",
+        "accreditedAlertMessage": "You have to check accredited check box",
+        "resetEmail": "Please enter your email address",
+        "resetTitle": "Reset Password",
+        "resetButton": "Reset Password",
+        "resetEmailConformtion": "Check your inbox!\nWe've sent you an email with password reset instructions.",
+        "resetEmailErrorNotExists": "Sorry, this email is not registered. Please try a different email address or sign up.    ",
+        "resetEmailError": "Your email should be valid.\r\n\r\n\r"
+    },
+    "support": {
+        "hereForYou": ", We are here for you!",
+        "leaveMessageFirstLine": "Leave a message and we will get back to you ",
+        "leaveMessageSecondLine": "as soon as possible",
+        "subjectPlaceHolder": "Subject",
+        "yourMessagePlaceHolder": "Your message",
+        "submitButton": "Send",
+        "supportEmailFirstLine": "If you prefer, feel free to email us directly at",
+        "supportEmailSecondLine": "support@listfunding.com",
+        "faqTitle": "FAQ",
+        "messageSentPopup": " Your message has been sent successfully.\r\n",
+        "requiredMessage": "Subject and message are required"
+    },
+    "simulation": {
+        "unavailblePage": "The page is under construction"
+    },
+    "pending_n_alerts": {
+        "faceValue": "Face Value",
+        "minInvest": "Min. investment",
+        "viewOffer": "View Offer",
+        "kycCardTitle": "KYC - Know Your Customer",
+        "kycCardContent": "Easily complete KYC using our online process.",
+        "accreditedCardTitle": "Accredited",
+        "accreditedCardContent": "Complete your accreditation requirements-easily upload the documents",
+        "upload": "Upload Now",
+        "uploadNow": "Upload Now",
+        "accreditedPopupHeader": "Please upload your accredited investor credentials",
+        "popupText": "Do not have accredited investor credentials?\n<div style=\"margin-left:20px\">\n1. Download the relevant documents <a href=\"https://list-upload-files-test.s3.us-east-2.amazonaws.com/ggg/Investor+verification+letter+template+(1).pdf\" target=\"_blank\">here</a>\n2. Forward these documents to your CPA/Financial adviser or other authorized authority\n3. After consulting with them and understanding the documents and statements, please upload the signed documents using the “Upload Now” button\n4. You can learn more about Accredited Investors –<a target=\"_blank\" href=\"https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated-3\"> here</a> \n</div>",
+        "personalInfoCardTitle": "Personal info",
+        "personalInfoCardContent": "Please fill in your basic information",
+        "updateNowButton": "Update now",
+        "startButton": "Start",
+        "financialInfoCardTitle": "Financial info",
+        "financialInfoCardContent": "Please fill in your financial information",
+        "uploadSuccessMessage": "Your document has been uploaded successfully,\nOur legal team will review it shortly and notify you if necessary",
+        "uploadSuccessPermanentMessage": "You have successfully uploaded the documents required by authorities for an accredited investor",
+        "AuthorizedUploadOfDoc": "Final step",
+        "AuthorizedUploadOfDocButten": "Uplode Now",
+        "AccreditedUploadSuccessfully": "You have successfully uploaded the documents required"
+    },
+    "holdings_investment_schedule": {
+        "faceValue": "Face Value",
+        "minInvest": "Min. investment",
+        "viewOffer": "View Offer",
+        "investorOpportunity": "Investment Opportunities",
+        "buildAlternativeProtfolio": "Start building your alternative Investment Portfolio"
+    },
+    "account": {
+        "pageTitle": "Edit My Profile",
+        "basicInformation": "Basic Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "resetPassword": "Reset Password",
+        "contactInformation": "Contact Information",
+        "email": "Email",
+        "address": "Address",
+        "city": "City",
+        "state": "State",
+        "zipCode": "Zip code",
+        "country": "Country",
+        "password": "Password",
+        "phoneNumber": "Phone number",
+        "linkedIn": "Linkedin",
+        "facebook": "Facebook",
+        "save": "Save",
+        "savedMessage": "Your changes have been saved successfully"
+    },
+    "investment_opportunities": {
+        "investNowPopup": "Please contact me. I would like to proceed with this investment.",
+        "investNowPopupSuccess": "Your investment request has been sent. We will contact you shortly in order to proceed with the investment.",
+        "offerNumber": "Offer Number",
+        "faceValue": "Face Value",
+        "minInvest": "Min. investment",
+        "viewOffer": "View Offer",
+        "avgDuration": "Avg. duration",
+        "avgIrr": "Avg. IRR",
+        "investNow": "Invest now",
+        "simulation": "Simulation",
+        "unavailblePage": "The page is under construction",
+        "popup1header": "Welcome to LiST \n",
+        "popup1content": "Through the platform you will gain access to unique non-correlated investment opportunities",
+        "popup1button": "Next",
+        "popup2content": "The investments will appear in the \"Investment Opportunities\" tab",
+        "popup2button": "Got it",
+        "popup3content": "Before actively participating in one of the investment opportunities, you are required to complete the\nregistration process here",
+        "popup3button": "Compliance, got it",
+        "popup4content": "If you have any questions, you can reach out to us through the support panel, where you can also find\nfrequently asked questions.",
+        "popup4button": "You're ready to start",
+        "popup4chekbox": "Don’t show me this again",
+        "popupInOfferChekbox": "Don’t show me this again",
+        "popupInOfferChekboxButton": "Got it",
+        "popupInOfferGoToWitchList": "The asset was added to the Watchlist tab",
+        "buttonaddtowatchlist": "Add to Watchlist",
+        "buttonclicked": "Added to Watchlist"
+    },
+    "global": {
+        "genericCopyright": "Copyright © 2018-2021. All rights reserved.     <a target=\"_blank\" href=\"https://listfunding.com/terms-of-use\">Terms Of Use</a> | <a target=\"\"_blank href=\"https://listfunding.com/privacy-policy__trashed-copy\">Privacy Policy<a/>"
+    },
+    "Witch_list_N_Simulations": {
+        "buttongotoinvestmentopportunity": "Go to Investment Opportunities",
+        "buttonsimulateandinvest": "Simulate & Invest",
+        "popupInOfferChekbox1": "Welcome to the Watchlist  & Simulation tab Here you will be able to review, run simulations (available shortly) and complete your investments.",
+        "popupInOfferChekbox2": "You can review the asset by clicking on the view button",
+        "popupInOfferChekbox3": "You can select the asset by clicking here",
+        "popupInOfferChekbox4": "Click on the Simulate & Invest button in order to run simulations or proceed with your investment ",
+        "popupInOfferChekbox5": "You can delete assets from your Watchlist using the delete icon",
+        "popupInOfferChekbox": "Don’t show me this again",
+        "PopupDeleteFromWitchList": "Do you want to remove this asset from your Watchlist?",
+        "PopuoIfNotCompietKYCetc": "In order to complete the investment, please complete the required regulation process",
+        "PopuoIfNotCompietKYCetcButten": "Go to Pending & Alerts",
+        "Feedbackpopupforinvestment": "Your investment request has been submitted. We will contact you shortly."
+    },
+    "FAQ": [
+        {
+            "question": "How frequently do I need to update accreditation information?",
+            "answer": "Accreditation status for investing via LiST will be verified with a third party and subsequently uploaded to the website. This verification will be valid for one year from the date the verification letter was signed, unless an alternative date is stated in the letter. "
+        },
+        {
+            "question": "How do I update my account details?",
+            "answer": "You can update your account details by clicking on “Account”, edit and save. If you require further assistance, please contact <a href=\"mailto: support@listfunding.com\">support@listfunding.com</a> and we will be happy to help with your request."
+        },
+        {
+            "question": "Is there a difference between the legal contracts for each investment opportunity?",
+            "answer": "In general, we strive for consistency between the various legal contracts for different investment offerings. However, given the different nature of the various investments, the contracts for each opportunity may be different from one another and it is important to carefully read all of the documents for each investment prior to signing."
+        },
+        {
+            "question": "How can I confirm that the payment wired for the investment was received by LiST?",
+            "answer": "Upon receiving the payment, LiST will send you an email that the payment was received."
+        },
+        {
+            "question": "How does the LiST platform secure my information?",
+            "answer": "Keeping your information secure is of high priority to LiST. Our technology team endeavors to utilize best practices for security sitewide."
+        },
+        {
+            "question": "How often do the payments need to be made (annually/quarterly/monthly)?",
+            "answer": "The frequency of the payments depends on the specific conditions of the offering. Details with respect to your upcoming payments may be viewed in the “Holdings and Investment Schedule” tab on the website. Moreover, we will be sending reminder emails prior to each payment date."
+        },
+        {
+            "question": "How often will I receive payments?",
+            "answer": "Our offerings distribute proceeds based on the occurrence of the maturity of the policy. The anticipated payment schedule is always outlined on the investment offering page as well as in the legal agreement. \r\n\r\nAn event-based payment schedule means that investors receive payments as soon as the policies reach maturity and the proceeds are paid. \r\nPayment dates and amounts cannot be pre-determined because the timing of the maturity is uncertain and as such, payments may be earlier or later than anticipated.\r\nPayments are not guaranteed and may be subject to delay or total loss. See the risk factors for each applicable offering for more details."
+        },
+        {
+            "question": "Where will the proceeds be sent to?",
+            "answer": "The payments will be wired to your account that you have registered with LiST upon making the investment. "
+        },
+        {
+            "question": "How frequently can I expect updates on my investments?",
+            "answer": "LiST will update its investors upon significant changes with respect to the investment on an ongoing basis. Moreover, LiST will provide an annual statement to investors with respect to each policy in which they have invested."
+        },
+        {
+            "question": "How is LiST paid for its services?",
+            "answer": "LiST is paid management fees that are specific to each investment and are outlined in the investment agreement. This fee includes all management aspects, such as third-party vendors and servicing providers.\r\nIn addition, LiST receives a percentage of the policy’s death benefit, which does not exceed 5% of the face value of the policy.\r\nPlease note that all of the IRR calculations, as stated in the relevant offering, are net of LiST’s fees.\r"
+        },
+        {
+            "question": "What are the payments I make used for?",
+            "answer": "The payments made include two components:\r\na.\tInitial investment amount, that is meant to cover the costs of acquiring a policy and covering additional expenses associated with the transaction, including, inter alia, provider, legal and third-party underwriting fees. \r\nb.\tAnnual investment amount which consists of premium payments to the life insurance carrier, management fees to LiST and ongoing fees meant to cover the servicing of the policy.\r"
+        },
+        {
+            "question": "How are my investments taxed?",
+            "answer": "Taxation in general, and taxation of life settlements and/or investments in life settlements should be discussed with your lawyer/accountant/tax advisor. \r\nIn general, under US tax law, the death benefit proceeds, less the applicable tax basis, arising from a life insurance policy acquired in the life insurance market are deemed to be ordinary income, subject to ordinary tax rates. The tax basis generally equals the purchase amount incurred to acquire the policy, in addition to premiums paid from the purchase date until the maturity date of the policy. \r\nLiST takes no responsibility with respect to this issue. \r"
+        }
+    ],
+    "Investor_offer": {
+        "NNNNN": "טקסט חסר - אדום\n\nטקסט חדש - כתום\n\nטקסט מאושר - צהוב",
+        "headerline1": "Investment Offering By LiST",
+        "headerline2": "Offering Number",
+        "firstParagrah": "Opportunity for accredited investors to invest by means of a private placement in Life Insurance policies. These assets are issued by life insurance carriers with high ratings and are collateralized by the proceeds of the policies. This form of investment is generally considered to be particularly attractive, as it has a low correlation with traditional markets. The investment funds will be used towards acquiring the policies, paying the ongoing premiums to the carrier and covering all other expenses relating to such policies (see below).",
+        "totalSummaryHeader": "Offering Summary",
+        "totalSummaryPg": "This offering has an investment entry component along with a commitment for ongoing further investments until maturity. The proceeds of the investment will be paid upon policy maturity, in a one time payment.",
+        "totalCommitmentHeader": "Annual Investment Commitment:",
+        "example": "Example - Minimum Investment",
+        "investmentPurchase": "Investment at Purchase",
+        "annualInvestmentHeader": "Annual Investment Commitment:",
+        "investmentOverview": "Investment Overview",
+        "returnScheduleHeader": "Investment and Return Schedule*",
+        "lifeExpectancyProvider": "Life expectancy provider",
+        "tableDisclaimer": "*The return and IRR are unpredictable and depend upon the occurrence of the maturity",
+        "policyOverviewHeader": "Policy overview",
+        "keyInfo": "Key info",
+        "numberOfPolicy": "Number of policies",
+        "numberPolicyholders": "Number of policyholders",
+        "insuranceCarrier": "Insurance Carrier",
+        "faceAmount": "Face amount",
+        "insuranceRating": "Insurance carrier rating (S&P)",
+        "primaryCategory": "Primary impairment category",
+        "age": "Age",
+        "gender": "Gender",
+        "faq": "FAQ",
+        "qa_whoInvest": "Who can invest?",
+        "qa_whoInvest_a": "This offering is open to US residents that are accredited investors.",
+        "qa_myExpected": "How is my expected return calculated and is my return guaranteed with an IRR equal to the average rate listed above?",
+        "qa_myExpected_a": "No. The average rate is used for calculating the dollar amount the investor will receive upon maturity. This is also calculated based on the actuarial underwriting and/or the relevant mortality tables. The IRR will only be known upon maturity of the policy and once proceeds are distributed. The return very much depends on the longevity of the insured.",
+        "qa_whenGetPaid": "When and how do I get paid?",
+        "qa_whenGetPaid_a": "Once the policy matures (i.e., when the insured passes away), a death claim will be filed. This generally takes between 1-2 months, while the proceeds accrue interest, although it may take longer in certain cases. Once the claim is paid by the carrier, you will receive your return on the investment.",
+        "qa_howMuchInvest": "How much should I invest?",
+        "qa_howMuchInvest_a": "In general, the minimum investment on LiST's platform is $10,000 at the closing and a commitment of ongoing investments as listed in the specific offering. In general, and particularly with respect to longevity linked assets, it is prudent to diversify your investments. As such, it is worthwhile considering investment of a small amount in a single investment, compared to the total amount that you plan to invest in the asset class.",
+        "qa_risksConsider": "Risks to consider:",
+        "qa_risksConsider_a": "Investing in insurance-backed assets is not risk free. There are several risks to consider such as, but not limited to, the longevity of the policyholder (i.e., the remaining lifespan of the policyholder will impact upon the return), carrier default risk (i.e., the risk of the carrier defaulting), policy risks (i.e., claims raised by the carrier according to which no/partial payout is due), or increase of the insurance rates, which may, in turn, increase the premium payments) and the lapsing of policy risk. At LiST, we do our best to perform due diligence on every policy, however, some of these risks are unpredictable and can have a dramatic impact on yields. We do not advise you to invest any amount that you cannot afford to lose in full.",
+        "qa_investmentInstallments": "Investment schedule and installments:",
+        "qa_investmentInstallments_a": "Participants in this offering will invest the purchase amount prior to the closing and will commit to a pre-determined ongoing investment schedule as shown above in the example. The investment it scheduled to cover the purchase of the policies, the policies premium payments and all other expenses associated with the deal such as but not only, legal fees, underwriting, policy servicing, bank fees, LiST's management fees etc..",
+        "qa_whySellingPolicy": "Why is the policyholder selling the policy?",
+        "qa_whySellingPolicy_a": "Generally, policies are sold in the secondary market, despite the fact that in many cases, the insured has held the policy for several decades. We have found that one of the main reasons for policy sales is due to the high costs of maintaining the policy premiums, that tend to increase to high and unaffordable rates. This leads certain policyholders to stop making the premiums payments which results in the policy lapsing. Others sell the policy to investors for a small amount of its face value and do not benefit from the proceeds upon maturity. LiST enables the policyholders with an empowering solution where they can stop paying premiums and, in many cases, still benefit from the proceeds upon maturity.",
+        "qa_whatHappens": "What happens if I am not interested in continuing my investment?",
+        "qa_whatHappens_a": "In general, the investment structure of this offering requires continuous investment from the initial closing date until the policy matures. With that said, we understand that circumstances may change, and that you may not be interested in continuing investments in the future. As such, you have the possibility of stopping your funding and retaining your interest in the investment based on the pro-rata amount already invested. You will be required to find a replacement for your investment that is pre approved by LiST. LiST can also reach out to our network as well in order to assist in finding an alternative investor. However, to the extent that no investor may be found based on the initial offering conditions, it may be necessary to auction off your investment portion, which may impact upon your initial investment.",
+        "disclaimerHeader": "Disclaimer",
+        "disclaimer": "LiST is neither registered as a broker-dealer nor as a life settlements broker or provider, nor does LiST advise on any sort of investment. LiST does not make any representation or warranty to any prospective investor regarding the legality of any investment. Moreover, this document does not purport to include all of the information necessary to evaluate an investment and is qualified in its entirety by the terms of the transaction documents, including the form of subscription agreements, terms and conditions. No offer or sale of any securities will occur without the delivery of confidential offering materials and related documents. Make sure you fully understand the totality of any financing transaction before you commit thereto. Please note that the figures that appear in this offering may be rounded to the number (in thousands) closest to that figure.",
+        "investNow": "Invest Now",
+        "investmentByList": "Investment Offering By LiST",
+        "publishNow": "Publish Now",
+        "investAmount": "Investment amount",
+        "investSummary": "Investment Summary",
+        "initInvest": "Initial investment",
+        "viewOffer": "View Offer",
+        "noteText": "The policy in this offer is a \"Survivor\" policy, insuring the lives of two individuals and matures upon their passing.",
+        "noteHeader": "Note",
+        "investNowPopup": "Please contact me. I would like to proceed with this investment.",
+        "investNowPopupSuccess": "Your investment request has been sent. We will contact you shortly in order to proceed with the investment.",
+        "learnMore": "LEARN MORE",
+        "learMorePopup": "Please contact me. I would like to discuss this opportunity.",
+        "learnMorePopupSuccess": "Your request has been submitted. We will contact you shortly in order to discuss this opportunity.",
+        "addWatchListButton": "Add to watchlist."
+    }
+}

@@ -1,0 +1,100 @@
+<div #toPdf>
+    <div class="flex-container">
+        <div>
+            <form [formGroup]="patientForm" class="cards">
+                <div class="card">
+                    <span class="card-title">Insured</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Source</span>
+                        <select class="input" formControlName="source">
+                            <option value="monday">Monday</option>
+                            <option value="truper">Truper</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Status</span>
+                        <select class="input" formControlName="group">
+                            <option value="{{group}}" *ngFor="let group of groups">
+                                {{group}}</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>First Name</span>
+                        <input class="input" type="text" shape="round" formControlName="FirstName">
+                    </span>
+                    <span class="input-text">
+                        <span>Middle Name</span>
+                        <input class="input" type="text" shape="round" formControlName="MiddleName">
+                    </span>
+                    <span class="input-text">
+                        <span>Family Name</span>
+                        <input class="input" type="text" shape="round" formControlName="LastName">
+                    </span>
+                    <span class="input-text">
+                        <span>Date Of Birth</span>
+                        <input class="input" type="date" shape="round" formControlName="DOB">
+                    </span>
+                    <span class="input-text">
+                        <span>Gender</span>
+                        <select class="input" formControlName="Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Smoker</span>
+                        <input class="input" formControlName="Smoke" style="width: 90px;" listInput type="checkbox" />
+                    </span>
+                    <span class="input-text">
+                        <span>SSN</span>
+                        <input class="input" type="number" shape="round" formControlName="SSN">
+                        <span class="error-message"
+                            *ngIf="patientForm.get('SSN').invalid &&   (patientForm.get('SSN').dirty ||patientForm.get('SSN').errors.pattern)">
+                            Please enter a valid number.
+                        </span>
+                    </span>
+                    <span class="input-text">
+                        <span>Address</span>
+                        <input class="input" type="text" shape="round" formControlName="Address">
+                    </span>
+                    <span class="input-text">
+                        <span>State</span>
+                        <input class="input" type="text" shape="round" formControlName="state">
+                    </span>
+                    <span class="input-text">
+                        <span>ZIP Code</span>
+                        <input class="input" type="text" shape="round" formControlName="Zip code">
+                    </span>
+                    <span class="input-text">
+                        <span>HIPPA</span>
+                        <select class="input" formControlName="Hippa">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Last medical record date</span>
+                        <input class="input" type="date" shape="round" formControlName="Last medical record">
+                    </span>
+                </div>
+            </form>
+            <button *ngIf="updateMode === 'Create'" class="buttons" (click)="savePatient()">Create</button>
+            <button *ngIf="updateMode === 'Update'" class="buttons" (click)="updatePatient(true)">Update and move to
+                case</button>
+            <button *ngIf="updateMode === 'case'" class="buttons" (click)="addPatientToCase()">Add Patient</button>
+            <button *ngIf="updateMode === 'Update'" class="buttons" (click)="updatePatient(false)">Update</button>
+            <button class="buttons" (click)="getAllPatients()">Add a case to an existing patient</button>
+            <button class="buttons" (click)="getAllCases()">Add a patient to an existing case</button>
+            <div *ngIf="showTableData">
+                <span style="font-size: large; font-weight: bold;">{{tableData.title}}</span>
+                <nb-card>
+                    <nb-card-body>
+                        <ng2-smart-table (edit)="getData($event)" [settings]="settings" [source]="tableData.source">
+                        </ng2-smart-table>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+    </div>
+</div>

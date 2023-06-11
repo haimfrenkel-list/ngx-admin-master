@@ -1,0 +1,9 @@
+<div class="message-container">
+  <div *ngFor="let message of ntf" class="message-box">
+    <div class="message-header">
+      <span class="case-code" (click)="navigateToCase(message.Case)">{{ message.Case }}</span>
+     
+    </div>
+    <p class="message-text">{{ message.Text }}</p>
+  </div>
+</div>

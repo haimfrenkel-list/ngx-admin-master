@@ -1,0 +1,74 @@
+<div style="color: black; margin: 40px;" *ngIf="! dataService.leWorkingSpeed && ! dataService.isLeDone">
+    Waiting for complete data extraction.
+</div>
+<div *ngIf="dataService.leWorkingSpeed" style="color: black; margin: 40px;">
+    Processing...
+
+    <!-- <div class="a"><img style="width: 400px; " [@enterAnimation] src="assets/images/slow.gif"
+            *ngIf="dataService.leWorkingSpeed === 'slow'" /></div>
+    <div class="a"><img style="width: 400px; " [@enterAnimation] src="assets/images/middle.gif"
+            *ngIf="dataService.leWorkingSpeed === 'middle'" /></div>
+    <div class="a"><img style="width: 400px; " [@enterAnimation] src="assets/images/fast.gif"
+            *ngIf="dataService.leWorkingSpeed === 'fast'" /></div> -->
+</div>
+<div *ngIf="dataService.isLeDone">
+    <h4 style="margin-top: 30px; margin-left: 30px; color: black;">Predictions</h4>
+    <div style="padding-left: 60px; ">
+        <div class="itemContainer" *ngFor="let key of keys">
+            <div *ngIf="dataService.allData.generalInfo[key]"
+                style="width: 25%; display: inline-block; padding-top: 20px;">
+
+                <span style="font-weight: 800; color: #34879F;">
+                    {{key}}
+                </span>
+                <div *ngIf="key != 'Smoke'" style="color: gray;">{{dataService.allData.generalInfo[key]}}</div>
+                <div *ngIf="key === 'Smoke' && !dataService.allData.generalInfo[key]" style="color: gray;">Non Smoker</div>
+                <div *ngIf="key === 'Smoke' && dataService.allData.generalInfo[key]" style="color: gray;"> Smoker</div>
+            </div>
+        </div>
+    </div>
+    <span style="font-weight: 800; color: #34879F;">
+        <!-- <div style="color: gray;"> Pred Year: </div> -->
+    </span> {{dataService.prediction}}
+    <div class="row" *ngIf="dataService.allData.le" style="margin-top: 40px;">
+        <div class="col-md-6">
+            <div #chart_line_lives style="width: 500px; height: 400px;"></div>
+        </div>    
+        <div class="col-md-6">
+            <div #chart_line_lives2 style="width: 500px; height: 400px;"></div>
+        </div>
+    </div>
+    <div class="row" *ngIf="dataService.allData.le">
+        <div class="col-md-6" style="margin-top: 40px;">
+            <table style="margin: auto;">
+                <thead>
+                    <th>Months</th>
+                    <th>Survivorship</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of dataService.allData.le['lives']; let i = index;">
+                        <td>{{i + 1}}</td>
+                        <td>{{item | number: '1.0-0'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6" style="margin-top: 40px;">
+            <table style="margin: auto;">
+                <thead>
+                    <th>Months</th>
+                    <th>Probabilty</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of dataService.allData.le['dies']; let i = index;">
+                        <td>{{i + 1}}</td>
+                        <td>{{item | number: '1.0-0'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div style="margin-top: 20px;"><button>Export as CSV</button> <button style="margin-left: 20px;">Export as JSON</button></div>
+</div>
+<div style="width: 100%; height: 30px;"></div>

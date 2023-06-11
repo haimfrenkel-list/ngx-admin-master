@@ -1,0 +1,310 @@
+<div #toPdf>
+
+    <div *ngFor="let job of jobs">
+        <button class="buttons" (click)="initForm(job)">{{job.Case}}</button>
+    </div>
+
+    {{status}}
+    <div class="flex-container">
+        <div *ngIf="currentJob">
+            <form [formGroup]="form" class="cards">
+                <div class="card">
+                    <span class="card-title">Basic information</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Case</span>
+                        <input class="input" type="text" shape="round" formControlName="Case">
+                    </span>
+                    <span class="input-text">
+                        <span>First Name</span>
+                        <input class="input" type="text" shape="round" formControlName="FirstName">
+                    </span>
+                    <span class="input-text">
+                        <span>Family Name</span>
+                        <input class="input" type="text" shape="round" formControlName="LastName">
+                    </span>
+                    <span class="input-text">
+                        <span>Date Of Birth</span>
+                        <input class="input" type="date" shape="round" formControlName="DOB">
+                    </span>
+                    <span class="input-text">
+                        <span>Age</span>
+                        <input class="input" type="text" shape="round" formControlName="Age" value="getAge()">
+                    </span>
+                    <span class="input-text">
+                        <span>Gender</span>
+                        <select class="input" formControlName="Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </span>
+                    <span class="input-text">
+                        <span>Smoker</span>
+                        <input class="input" formControlName="Smoke" style="width: 90px;" listInput type="checkbox" />
+                    </span>
+                    <span class="input-text">
+                        <span>Latest BMI</span>
+                        <input class="input" type="number" shape="round" formControlName="BMI">
+                    </span>
+                    <span class="input-text">
+                        <span>SSN</span>
+                        <input class="input" type="text" shape="round" formControlName="SSN">
+                    </span>
+                    <span class="input-text">
+                        <span>Address</span>
+                        <input class="input" type="text" shape="round" formControlName="Address">
+                    </span>
+                    <span class="input-text">
+                        <span>State</span>
+                        <input class="input" type="text" shape="round" formControlName="State">
+                    </span>
+                    <span class="input-text">
+                        <span>ZIP Code</span>
+                        <input class="input" type="text" shape="round" formControlName="ZIPcode">
+                    </span>
+                </div>
+                <div class="card">
+                    <span class="card-title">Policy information</span>
+                    <br>
+                    <span class="input-text">
+                        <span>sale Date</span>
+                        <input type="date" class="input" shape="round" formControlName="saleDate"
+                            placeholder="Sale date">
+                    </span>
+                    <span class="input-text">
+                        <span>Policy size</span>
+                        <input type="text" class="input" shape="round" formControlName="policySize">
+                    </span>
+                    <span class="input-text">
+                        <span>Medical record Start Date</span>
+                        <input type="date" class="input" shape="round" formControlName="StartDate">
+                    </span>
+                    <span class="input-text">
+                        <span>Medical record End Date</span>
+                        <input type="date" class="input" shape="round" formControlName="EndDate">
+                    </span>
+                </div>
+                <div class="card">
+                    <span class="card-title">General information</span>
+                    <br>
+                    <span class="input-text">
+                        <span>Family history</span>
+                        <textarea type="text" class="input" style="width: 320px; height: 70px;" shape="round"
+                            formControlName="FamilyHistory"></textarea>
+                    </span>
+                    <span class="input-text">
+                        <span>Social Status</span>
+                        <textarea type="text" class="input" style="width: 320px; height: 70px;" shape="round"
+                            formControlName="SocialStatus"></textarea>
+                    </span>
+                    <span class="input-text">
+                        <span>Functional State</span>
+                        <textarea type="text" class="input" style="width: 320px; height: 70px;" shape="round"
+                            formControlName="functionalState"></textarea>
+                    </span>
+                    <span class="input-text">
+                        <span>Mental State</span>
+                        <textarea type="text" class="input" style="width: 320px; height: 70px;" shape="round"
+                            formControlName="mentalState"></textarea>
+                    </span>
+                    <span class="input-text">
+                        <span>Ambulation State</span>
+                        <textarea type="text" class="input" style="width: 320px; height: 70px;" shape="round"
+                            formControlName="AmbulationState"></textarea>
+                    </span>
+                    <div class="card">
+                        <span class="input-text">
+                            <span>Smoking info:</span>
+                            <select class="input" formControlName="SmokingInfo">
+                                <option value="Smoker">Smoker</option>
+                                <option value="Former Smoker">Former Smoker</option>
+                                <option value="Non Smoking">Non Smoking</option>
+                            </select>
+                        </span>
+                        <span class="input-text">
+                            <span>Year Of Quitting</span>
+                            <input type="date" class="input" shape="round" formControlName="YearOfQuitting">
+                        </span>
+                        <span class="input-text">
+                            <span>Notes</span>
+                            <textarea class="input" type="text" shape="round"
+                                formControlName="NotesForSmoking"></textarea>
+                        </span>
+                    </div>
+                </div>      
+                <div class="card" style="width:auto;">
+                    <span class="card-title">Impairment</span>
+                    <br>
+                    <table style="display: inline-block;">
+                        <thead>
+                            <th>category</th>
+                            <th>impairment</th>
+                            <th>type</th>
+                            <th>range</th>
+                            <th>severity</th>
+                            <th>location</th>
+                            <th>note</th>
+                            <th>debit/credit</th>
+                        </thead>
+                        <tbody formArrayName="impiaements">
+                            <tr class="uploadPolicyContainer" style="color: black;"
+                                *ngFor="let impr of form.controls.impiaements.controls let i = index"
+                                [formGroupName]="i">
+                                <ng-container>
+                                    <td>
+                                        <select class="input" style="width: 140px;" formControlName="category"
+                                            (change)="getImpaiement(i)">
+
+                                            <option value="{{cat}}" *ngFor="let cat of categorys">
+                                                {{cat}}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="input" style="width: 140px;" formControlName="impairment"
+                                            (change)="getSeverity(i)">
+                                            <option value="{{impaie.impairment}}"
+                                                *ngFor="let impaie of impaiement[form.get(['impiaements', i, 'category']).value]">
+                                                {{impaie.impairment}}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="input" style="width: 140px;" formControlName="type">
+                                            <option
+                                                *ngFor="let type of types[form.get(['impiaements', i, 'impairment']).value]"
+                                                value="{{type}}">{{type}}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="input" style="width: 140px;" formControlName="range">
+                                            <option
+                                                *ngFor="let reange of renges[form.get(['impiaements', i, 'impairment']).value]"
+                                                value="{{reange}}">{{reange}}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="input" style="width: 140px;" formControlName="severity">
+                                            <option
+                                                *ngFor="let sever of severity[form.get(['impiaements', i, 'impairment']).value]"
+                                                value="{{sever}}">{{sever}}</option>
+                                        </select>
+                                    </td>
+
+                                    <td>
+                                        <input class="input" style="width: 140px;" formControlName="LocationInDocument"
+                                            placeholder="Location in document">
+                                    </td>
+                                    <td>
+                                        <textarea class="input" style="width: 350px; height: 70px;"
+                                            formControlName="note" placeholder="note"></textarea>
+                                    </td>
+                                    <td>
+                                        <input class="input" style="width: 80px;" type="number" (change)="sumCD()"
+                                            formControlName="debit/credit">
+                                    </td>
+                                    <td>
+                                        <button class="buttons" (click)="removeImp(i)">remove</button>
+                                    </td>
+                                </ng-container>
+                            </tr>
+                        </tbody>
+                        <button class="buttons" (click)="addImpiaements()">add</button>
+                    </table>
+                    <span class="input-text">
+                        <span>edit credit/debit</span>
+                        <input type="number" class="input" shape="round" formControlName="DiscretionCD"
+                            (change)="sumCD()">
+                    </span>
+                    <span class="input-text">
+                        <span>total credit\debit</span>
+                        <span class="input-info"> {{form.get(['SummrayCD']).value}}</span>
+                    </span>
+                    <br>
+                </div>
+                <div class="card" style="background-color: palevioletred;" *ngIf="comments.length > 0">
+                    <table style="border-spacing: 25px; border-collapse: separate;">
+                        <thead>
+                            <th>impairment</th>
+                            <th>comment</th>
+                            <th>recommended debit</th>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let comm of comments">
+                                <tr>
+                                    <td class="input" style="width: 150px;">{{comm.Impairment}}</td>
+                                    <td class="input" style="width: 450px;">{{comm.comment}}</td>
+                                    <td class="input" style="width: 450px;">{{comm.RecommendedDebit}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                </tr>
+                            </ng-container>
+                        </tbody>
+                        <button *ngIf="!this.confirm" style="background-color: red; border-color: red;"
+                            (click)="confirmDetalis()" class="buttons">Confirm Details </button>
+                    </table>
+                </div>
+                <div class="card" style="display: grid;">
+
+                    <div style="display: flex;">
+                        <button class="buttons" *ngIf="!updateMode" (click)="save()">save</button>
+                        <button class="buttons" *ngIf="updateMode" (click)="save()">update</button>
+                        <button class="buttons" *ngIf="updateMode"
+                            (click)="deleteUnder(form.get('Case').value, true)">delete</button>
+                        <button class="buttons" *ngIf="updateMode" (click)="reports('external')">External
+                            Report</button>
+                        <button class="buttons" *ngIf="updateMode" (click)="reports('internal')">Internal
+                            Report</button>
+                        <button class="buttons" (click)="reports('messages')">messages</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="display: flex;">
+                        <span class="input-text" style="margin: 5px;">
+                            <span>Mean life expectancy (months)</span>
+                            <span class="input-info"> {{form.get(['LE']).value}}</span>
+                        </span>
+                        <span class="input-text" style="margin: 5px;">
+                            <span>Median life expectancy (months)</span>
+                            <span class="input-info"> {{form.get(['median']).value}}</span>
+                        </span>
+                        <span class="input-text" style="margin: 5px;">
+                            <span>Mean life expectancy (age)</span>
+                            <span class="input-info"> {{form.get(['LEage']).value}}</span>
+                        </span>
+                        <span class="input-text" style="margin: 5px;">
+                            <span>Median life expectancy (age)</span>
+                            <span class="input-info">{{form.get(['medianAge']).value}}</span>
+                        </span>
+                    </div>
+                    <div *ngIf="charts && charts['LE']" style="display: flex;">
+                        <!-- <ngx-charts [data]="charts['LE']"></ngx-charts>
+                        <ngx-charts [data]="charts['prob']"></ngx-charts> -->
+                        <div>
+                            <div style="display: flex;">
+                                <span class="tabel-title-data">month</span>
+                                <span class="tabel-title-data">lives</span>
+                                <span class="tabel-title-data">dead</span>
+                                <span class="tabel-title-data">reasonability</span>
+                            </div>
+                            <span *ngFor="let data of chartData; let i = index" style="display: flex;">
+                                <span class="table-data">{{i + 1}}</span>
+                                <span class="table-data">{{data.lives}}</span>
+                                <span class="table-data"> {{data.deth}}</span>
+                                <span class="table-data"> {{data.pre}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

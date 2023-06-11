@@ -1,0 +1,24 @@
+<h4 style="color: black; margin-left: 30px; margin-top: 30px;">{{name}}</h4>
+<table>
+    <thead>
+        <th *ngFor="let keyName of dataService.baseData.tables[name]">
+            {{keyName}}
+        </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of dataService.tables[name]">
+            <td *ngFor="let key of dataService.baseData.tables[name]">
+                {{row[key]}}
+            </td>
+        </tr>
+        <!-- <tr [formGroup]="form">  
+                <td *ngFor="let key of dataService.baseData.tables[name]">
+                    <input style="height: auto;" formControlName="{{keyName}}">
+                </td>
+                <td (click)="save()">
+                    save
+                </td> 
+        </tr> -->
+    </tbody>
+</table>
+<div style="width: 100%; height: 100px;"></div>

@@ -1,0 +1,252 @@
+<div #toPdf>
+    <div class="flex-container">
+        <div class="cards">
+            <div class="card">
+                <span class="card-title">underwriting info</span>
+                <br>
+                <span class="input-text">
+                    <span>created by</span>
+                    <span class="input">{{data.createdBy}}</span>
+                </span>
+                <span class="input-text">
+                    <span>created on</span>
+                    <span class="input">{{data.createdOn}}</span>
+                </span>
+                <span class="input-text">
+                    <span>last update by</span>
+                    <span class="input">{{data.lastUpdateBy}}</span>
+                </span>
+                <span class="input-text">
+                    <span>last update on</span>
+                    <span class="input">{{data.lastUpdateOn}}</span>
+                </span>
+            </div>
+            <div class="card">
+                <span class="card-title">Basic information</span>
+                <br>
+                <span class="input-text">
+                    <span>Case</span>
+                    <span class="input">{{data.Case}}</span>
+                </span>
+                <span class="input-text">
+                    <span>First Name</span>
+                    <span class="input">{{data.FirstName}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Family Name</span>
+                    <span class="input">{{data.LastName}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Date Of Birth</span>
+                    <span class="input">{{data.DOB}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Age</span>
+                    <span class="input">{{data.Age}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Gender</span>
+                    <span class="input">{{data.Gender}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Smoker</span>
+                    <span class="input">{{data.Smoke}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Latest BMI</span>
+                    <span class="input">{{data.BMI}}</span>
+                </span>
+                <span class="input-text">
+                    <span>SSN</span>
+                    <span class="input">{{data.SSN}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Address</span>
+                    <span class="input">{{data.Address}}</span>
+                </span>
+                <span class="input-text">
+                    <span>State</span>
+                    <span class="input">{{data.State}}</span>
+                </span>
+                <span class="input-text">
+                    <span>ZIP Code</span>
+                    <span class="input">{{data.ZIPcode}}</span>
+                </span>
+            </div>
+            <div class="card">
+                <span class="card-title">Policy information</span>
+                <br>
+                <span class="input-text">
+                    <span>sale Date</span>
+                    <span class="input">{{data.saleDate}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Policy size</span>
+                    <span class="input">{{data.policySize}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Medical record Start Date</span>
+                    <span class="input">{{data.StartDate}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Medical record End Date</span>
+                    <span class="input">{{data.EndDate}}</span>
+                </span>
+            </div>
+            <div class="card">
+                <span class="card-title">General information</span>
+                <br>
+                <span class="input-text">
+                    <span>Family history</span>
+                    <span class="input" style="width: 320px; height: 70px;">{{data.FamilyHistory}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Social Status</span>
+                    <span class="input" style="width: 320px; height: 70px;">{{data.SocialStatus}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Functional State</span>
+                    <span class="input" style="width: 320px; height: 70px;">{{data.functionalState}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Mental State</span>
+                    <span class="input" style="width: 320px; height: 70px;">{{data.mentalState}}</span>
+                </span>
+                <span class="input-text">
+                    <span>Ambulation State</span>
+                    <span class="input" style="width: 320px; height: 70px;">{{data.AmbulationState}}</span>
+                </span>
+                <div class="card">
+                    <span class="input-text">
+                        <span>Smoking info:</span>
+                        <span class="input">{{data.SmokingInfo}}</span>
+                    </span>
+                    <span class="input-text">
+                        <span>Year Of Quitting</span>
+                        <span class="input">{{data.YearOfQuitting}}</span>
+                    </span>
+                    <span class="input-text">
+                        <span>Notes</span>
+                        <span class="input">{{data.NotesForSmoking}}</span>
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <span class="card-title">BMI</span>
+                <br>
+                <div style="display: flex;">
+                    <span>
+                        <div style="display: flex;">
+                            <span class="tabel-title">date</span>
+                            <span class="tabel-title">value</span>
+                        </div>
+                        <span *ngFor="let bmi of data.longBMI" style="display: flex;">
+                            <span class="tabel-input">{{bmi.Date}}</span>
+                            <span class="tabel-input"> {{bmi.value}}</span>
+                        </span>
+                    </span>
+                    <div *ngIf="charts['BMI']">
+                        <ngx-charts [data]="charts['BMI']"></ngx-charts>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span class="card-title">Blood tests</span>
+                <div style="display: flex;">
+                    <div class="card" *ngFor="let test of data.bloodTests">
+                        <span class="card-title" style="font-size:medium;"> {{test.Type}}</span>
+                        <div style="display: flex;">
+                            <div>
+                                <div style="display: flex;">
+                                    <span class="tabel-title" style="font-weight: normal;">date</span>
+                                    <span class="tabel-title" style="font-weight: normal;">value</span>
+                                </div>
+                                <span *ngFor="let te of test.results" style="display: flex;">
+                                    <span class="tabel-input">{{te.Date}}</span>
+                                    <span class="tabel-input"> {{te.Value}}</span>
+                                </span>
+                            </div>
+                            <div *ngIf="charts['BMI']">
+                                <ngx-charts [data]="charts[test.Type]"></ngx-charts>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span class="card-title">Impairment</span>
+                <br>
+                <div style="display: flex;">
+                    <span class="tabel-title">category</span>
+                    <span class="tabel-title">impairment</span>
+                    <span class="tabel-title">type</span>
+                    <span class="tabel-title">range</span>
+                    <span class="tabel-title">severity</span>
+                    <span class="tabel-title">location</span>
+                    <span class="tabel-title">debit/credit</span>
+                    <span class="tabel-title">note</span>
+                </div>
+                <span *ngFor="let imp of data.impiaements" style="display: flex;">
+                    <span class="tabel-input" style="height: 150px;">{{imp.category}}</span>
+                    <span class="tabel-input" style="height: 150px;"> {{imp.impairment}}</span>
+                    <span class="tabel-input" style="height: 150px;">{{imp.type}}</span>
+                    <span class="tabel-input" style="height: 150px;"> {{imp.range}}</span>
+                    <span class="tabel-input" style="height: 150px;">{{imp.severity}}</span>
+                    <span class="tabel-input" style="height: 150px;"> {{imp.LocationInDocument}}</span>
+                    <span class="tabel-input" style="height: 150px;"> {{imp['debit/credit']}}</span>
+                    <span class="tabel-input" style="height: auto;">{{imp.note}}</span>
+
+                </span>
+                <span class="input-text">
+                    <span>edit credit\debit</span>
+                    <span class="input">{{data.SummrayCD}}</span>
+                </span>
+            </div>
+            <div *ngIf="charts.length > 0" style="display: flex;">
+                <div *ngFor="let chart of charts">
+                    <ngx-charts [data]="chart"></ngx-charts>
+                </div>
+            </div>
+            <div class="card">
+                <div style="display: flex;">
+                    <span class="input-text" style="margin: 5px;">
+                        <span>Average life expectancy (months)</span>
+                        <span class="input"> {{data.LE}}</span>
+                    </span>
+                    <span class="input-text"  style="margin: 5px;">
+                        <span>Median life expectancy (months)</span>
+                        <span class="input"> {{data.median}}</span>
+                    </span>
+                    <span class="input-text"  style="margin: 5px;">
+                        <span>Average life expectancy (age)</span>
+                        <span class="input"> {{data.LEage}}</span>
+                    </span>
+                    <span class="input-text"  style="margin: 5px;">
+                        <span>Median life expectancy (age)</span>
+                        <span class="input">{{data.medianAge}}</span>
+                    </span>
+                </div>
+                <div style="display: flex;">
+                    <ngx-charts [data]="charts['LE']"></ngx-charts>
+                    <ngx-charts [data]="charts['prob']"></ngx-charts>
+                    <div>
+                        <div style="display: flex;">
+                            <span class="tabel-title-data">month</span>
+                            <span class="tabel-title-data">lives</span>
+                            <span class="tabel-title-data">dead</span>
+                            <span class="tabel-title-data">reasonability</span>
+                        </div>
+                        <span *ngFor="let data of data.LEdata; let i = index" style="display: flex;">
+                            <span class="table-data">{{i + 1}}</span>
+                            <span class="table-data">{{data.lives}}</span>
+                            <span class="table-data"> {{data.deth}}</span>
+                            <span class="table-data"> {{data.pre}}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a [href]="fileUrl" [download]="fileName" #download id="downloadPdf" style="visibility: hidden;">DownloadFile</a>

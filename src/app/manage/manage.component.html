@@ -1,0 +1,23 @@
+<ngx-one-column-layout class="nb-theme-listSet" *ngIf="! mobile">
+  <nb-menu [items]="menu"></nb-menu>
+  <router-outlet class="nb-theme-listSet"></router-outlet>
+  <div menu-footer *ngIf="isInvestor">
+    <div class="dataHeader">Invested amount</div>
+    <div class="dataBox" >${{investmentAmount}}</div>
+    <div class="dataHeader"> Avg. Target IRR</div>
+    <div class="dataBox">{{targetIrr}}%</div>
+  </div>
+
+</ngx-one-column-layout>
+
+<ngx-mobile-column *ngIf="mobile">
+<nb-menu [items]="menu"></nb-menu>
+<router-outlet></router-outlet>
+<div menu-footer *ngIf="isInvestor">
+  <div class="dataHeader">Invested amount</div>
+  <div class="dataBox" >${{investmentAmount}}</div>
+  <div class="dataHeader"> Avg. Target IRR</div>
+  <div class="dataBox">{{targetIrr}}%</div>
+</div>
+
+</ngx-mobile-column>
