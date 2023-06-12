@@ -5,13 +5,15 @@
  */
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Injector, NgModule } from '@angular/core';
+import { Injector, NgModule, ErrorHandler  } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import * as Sentry from "@sentry/angular-ivy";
+import { Router } from "@angular/router";
 
 import {
   NbChatModule,
@@ -44,10 +46,23 @@ import { ServiceLocator } from './helper/locator.service';
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
   ],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    },
+  ],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(private injector: Injector,
+  constructor(private injector: Injector, trace: Sentry.TraceService,
     http: HttpClientModule) {    // Create global Service Injector.
       ServiceLocator.injector = this.injector;
       window['mobileCheck'] = function() {

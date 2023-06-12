@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import {
   NbActionsModule,
   NbLayoutModule,
-  NbMenuModule,
   NbSearchModule,
   NbSidebarModule,
   NbUserModule,
@@ -12,10 +11,10 @@ import {
   NbSelectModule,
   NbIconModule,
   NbThemeModule,
+  NbMenuModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbSecurityModule } from '@nebular/security';
-
 import {
   FooterComponent,
   HeaderComponent,
@@ -33,11 +32,13 @@ import {
   OneColumnLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
+  // MobileColumnComponent
 } from './layouts';
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { DARK_THEME } from './styles/theme.dark';
+import { LISTSET_THEME } from './styles/theme.listSet';
 
 const NB_MODULES = [
   NbLayoutModule,
@@ -61,6 +62,7 @@ const COMPONENTS = [
   OneColumnLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
+  // MobileColumnComponent
 ];
 const PIPES = [
   CapitalizePipe,
@@ -73,7 +75,9 @@ const PIPES = [
 @NgModule({
   imports: [CommonModule, ...NB_MODULES],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
-  declarations: [...COMPONENTS, ...PIPES],
+  declarations: [...COMPONENTS, ...PIPES, 
+    // MobileColumnComponent
+  ],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders<ThemeModule> {
@@ -82,9 +86,9 @@ export class ThemeModule {
       providers: [
         ...NbThemeModule.forRoot(
           {
-            name: 'default',
+            name: 'listSet',
           },
-          [ DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME, DARK_THEME ],
+          [ DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME, DARK_THEME, LISTSET_THEME ],
         ).providers,
       ],
     };

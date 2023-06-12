@@ -37,6 +37,7 @@ export class PatientFormComponent implements OnInit {
     
   }
 
+
   initForm() {
     this.patientForm = new FormGroup({
       "FirstName": new FormControl(null),
